@@ -66,18 +66,9 @@ ul:not([class])
       left: 0
       border-radius: 50%
       border: 2px solid #199525
-a:not([class])
-  text-decoration: underline
 button
   @include reset-button
   cursor: pointer
-section[class]
-  padding-bottom: 60px
-  padding-top: 60px
-section.banner-p-bottom
-  padding-bottom: 0
-section.banner-p-top
-  padding-top: 0
 body
   min-width: 320px
   max-width: 1980px
@@ -87,17 +78,15 @@ body
   overflow-x: hidden
   color: $default
   background-color: $white
-  font-family: 'HelveticaNeueCyr', Helvetica, Arial, sans-serif
+  font-family: 'Roboto', Helvetica, Arial, sans-serif
   letter-spacing: 0.02em
   @include font(300,14px,24px)
   a
-    color: #199525
-  a:hover
-    color: #3eb54b
+    color: $black
+  a:hover,a:active
+    color: $blue
     outline: none
-  a:active
-    color: #3eb54b
-    outline: none
+    border-bottom: 1px dotted $blue
   blockquote
     display: grid
     grid-template-columns: 60px 1fr
@@ -131,20 +120,29 @@ h1,h2,h3,h4,h5,.h1-title,.h2-b-title,.h3-title,.h4-title,.h5-title,blockquote
   margin: 1.0933333333rem 0 .656rem 0
 .subtitle
   margin-bottom: 6px
+  position: relative
+  &::after
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    margin-left: 33px
+    width: 30px
+    height: 10px
+    background: url("../img/icons/title-dec.svg") no-repeat center/100%
 .info-title
   margin-top: 0
 h1,.h1-title
-  @include font(bold,30px,30px)
+  @include font(bold,46px,52px)
   color: $black
 h2,.h2-title
-  @include font(bold,24px,28px)
+  @include font(bold,36px,42px)
   color: $black
 h3,.h3-title
-  @include font(bold,18px,18px)
+  @include font(bold,24px,28px)
 h4,.h4-title
-  @include font(bold,16px,16px)
+  @include font(bold,18px,21px)
 h5,.h5-title
-  @include font(normal,14px,28px)
+  @include font(normal,16px,21px)
 h6
   @include font(normal,12px,10px)
 b,strong
@@ -154,7 +152,9 @@ img
   height: auto
 .title
   font-size: 72px
-  line-height: 72px
+  line-height: 84px
+  text-transform: uppercase
+  z-index: 1
 .title-center
   text-align: center
 .hidden
@@ -165,9 +165,9 @@ img
 #main,#footer,#header
   width: 100%
 section.grey-bg,div.grey-bg
-  background: #F4F4F4
+  background-color: #F5F5F5
 section.white-bg,div.white-bg
-  background: $white
+  background-color: $white
 .mobile-block
   display: none !important
 // containers
@@ -183,7 +183,7 @@ section.white-bg,div.white-bg
   max-width: 1500px
   margin: 0 auto
 .container
-  max-width: 1380px
+  max-width: 1365px
   padding: 0 30px
   margin: 0 auto
   position: relative
@@ -196,42 +196,55 @@ section.white-bg,div.white-bg
 .btn
   display: block
   cursor: pointer
-  width: 293px
-  height: 60px
-  line-height: 60px
-  background-color: #fff
   border-radius: 3px
-  border: 2px solid transparent
   text-align: center
-  text-transform: uppercase
-  color: #595959
+  width: 230px
+  height: 40px
+  line-height: 40px
   font-weight: bold
-.btn-link
-  border-color: #FCBD6D
-  text-decoration: none
+  transition: all 500ms ease-in-out
+  color: $white
   &:hover
-    background: #FCBD6D
-    color: $white
-.btn-link-green
-  border: 2px solid #199525
-  border-radius: 3px
-  text-decoration: none
-  &:hover
-    background: #199525
-    color: $white
-.more:not(.alm-load-more-btn)
-  display: block
+    text-decoration: none
+.btn-blue
+  background: linear-gradient(78.73deg, #52C4C4 0%, #81E6E6 100%)
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)
+.btn-red
+  background: linear-gradient(101.04deg, #C24040 0%, #EB7676 100%)
+//Site contact
+.site-contacts
+  grid-template-columns: 40px  150px
+  grid-template-rows: 1fr
+  grid-gap: 15px
+  justify-content: start
+.site-contacts-icon
   width: 40px
-  height: 27px
-  background: url("../img/icons/left-orange.svg") no-repeat center/100%
-.btn-load-more
-  margin: 20px auto
-  &.done
-    background: #e0e0e0
-    border: 1px solid #e0e0e0
-    color: $white
-.toggle-nav
-  display: none
+  height: 40px
+  line-height: 40px
+  margin-right: 15px
+  text-align: center
+  color: $red
+  font-size: 18px
+  font-weight: bold
+  border-radius: 3px
+  border: 1px solid rgba(194, 64, 64, 0.15)
+.site-contacts-info
+  color: $black
+  font-weight: bold
+  display: block
+  text-decoration: none
+  font-size: 16px
+  line-height: 17px
+  border-bottom: 1px solid transparent
+.site-contacts-info-text
+  text-align: right
+  font-size: 10px
+  line-height: 11px
+  color: $blue
+  border-bottom: 1px dotted $blue
+.site-contact-graphic
+  color: $black
+  border-bottom: 0
 //Youtube video
 .youtube
   width: 100%
@@ -246,21 +259,460 @@ section.white-bg,div.white-bg
   border-radius: 3px
   overflow: hidden
   .play
-    background: center/30px no-repeat url('../img/icons/play-white.svg') #015114
-    width: 98px
-    height: 98px
+    background: center/cover no-repeat url('../img/icons/play.svg') transparent
+    width: 80px
+    height: 80px
     border-radius: 50%
   .youtube-text
     font-weight: bold
     font-size: 24px
-    line-height: 28px
-    width: 100%
+    line-height: 24px
+    max-width: 197px
     color: $black
-    margin: 30px auto
 .youtube-container
   justify-content: center
   width: 100%
   height: 100%
-  align-content: center
-
+  align-items: center
+//Forms
+.lead-form-item
+  border-radius: 3px
+  background-color: $white
+  border: 1px solid #EBEBEB
+  padding: 0 14px
+  color: #9C9C9C
+  height: 40px
+  line-height: 40px
+.lead-form-file,.lead-form-checkbox
+  display: none
+.lead-form-files
+  padding-left: 0
+  padding-top: 0
+  padding-bottom: 0
+.lead-form-file-label
+  display: block
+  width: 100%
+  height: 100%
+  &::before
+    content: ''
+    display: inline-block
+    background: url("../img/icons/landscape.svg") no-repeat center/50% #EBEBEB
+    width: 40px
+    height: 40px
+.lead-form-file-text
+  vertical-align: super
+  display: inline-block
+  line-height: 16px
+  width: 50%
+  margin-left: 5px
+.lead-form-check
+  border: none
+.lead-form-checkbox:checked + .lead-form-checkbox-label::before
+    background: url('../img/icons/form-done.svg') no-repeat center/contain
+.lead-form-checkbox-label
+  display: flex
+  align-items: center
+  &::before
+    content: ''
+    display: inline-block
+    border: 1px solid #EBEBEB
+    box-sizing: border-box
+    border-radius: 3px
+    width: 28px
+    height: 20px
+    vertical-align: sub
+.lead-form-checkbox-text
+  display: inline-block
+  line-height: 20px
+  margin-left: 15px
+  a
+    color: $blue
+    text-decoration: underline
+//Popup
+.popup
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  display: none
+  z-index: 4
+.popup-wrapper
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+.popup-container
+  width: 70%
+  padding: 20px
+  background: #FFFFFF
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2)
+  border-radius: 3px
+  iframe
+    width: 100%
+    height: 400px
+.popup-header
+  margin-bottom: 25px
+  position: relative
+.popup-close
+  position: absolute
+  top: 0
+  right: 0
+  font-size: 22px
+  cursor: pointer
+.popup-banner-video
+  height: 400px
+//Header
+.header-top
+  padding: 25px 0
+  background: $white
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05)
+.header-top-container
+  grid-template-columns: 200px 230px 1fr 230px
+  grid-template-rows: 1fr
+  grid-gap: 30px
+  align-items: center
+  &>div,ul,button
+    align-self: center
+.logo
+  grid-template-columns: 62px 100px
+  grid-template-rows: 1fr
+  justify-content: start
+  grid-gap: 25px
+.logo-img
+  img
+    height: 48px
+.logo-title
+  font-weight: bold
+  font-size: 18px
+  line-height: 21px
+  color: #000000
+  padding-top: 5px
+.logo-subtitle
+  font-size: 10px
+  line-height: 12px
+  color: #6B6B6B
+.catalog-toggle
+  display: grid
+  grid-template-columns: 40px 1fr
+  grid-template-rows: 1fr
+  grid-gap: 15px
+  text-align: left
+  position: relative
+.catalog-menu-wrapper
+  display: none
+  position: absolute
+  top: 45px
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2)
+  border-radius: 3px
+  z-index: 1
+.catalog-item
+  flex: 1 0 250px
+  margin: .7%
+  a
+    text-decoration: none
+  &::before
+    content: ''
+    width: 10px
+    height: 2px
+    background: rgba(39, 122, 122, 0.3)
+    display: inline-block
+    vertical-align: middle
+    margin-right: 9px
+.catalog-more
+  display: block
+  padding: 20px
+  text-align: center
+  background-color: #EDEDED
+  text-decoration: none
+  font-weight: normal
+.catalog-menu
+  background: $white
+  padding: 20px
+  width: 675px
+.toggle-decs
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding-left: 15px
+.toggle-dec
+  height: 3px
+  background: #FFFFFF
+  border-radius: 2px
+  &:not(:last-child)
+    margin-bottom: 5px
+  &:nth-child(1)
+    width: 60%
+  &:nth-child(2)
+    width: 80%
+.header-menu
+  align-items: center
+.header-menu-item
+  a
+    font-weight: bold
+    text-decoration: none
+.header-bottom
+  background: #FFFFFF
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+  border-radius: 3px
+  grid-template-columns: 200px 210px 210px 210px 1fr
+  grid-gap: 40px
+  grid-template-rows: 1fr
+  padding-top: 15px
+  padding-bottom: 15px
+.header-search
+  background: #FFFFFF
+  border: 1px solid #ECECEC
+  border-radius: 3px
+.header-search-input
+  display: block
+  width: 80%
+  padding: 12px
+.header-search-submit
+  width: 40px
+  @include reset-button
+  background-color: transparent
+  color: $blue
+/* Main banner */
+.main-banner
+  margin-top: -70px
+  background-repeat: no-repeat
+  background-position: top right
+.main-banner-container
+  grid-template-columns: 2fr 1.5fr
+  grid-template-rows: 1fr
+  grid-column-gap: 30px
+  padding-top: 170px
+  padding-bottom: 100px
+  background-repeat: no-repeat
+  background-position: top right
+.main-banner-item
+  position: relative
+.main-banner-content
+  margin: 54px 0 70px 0
+  max-width: 558px
+.banner-play-container
+  position: absolute
+  top: 30%
+  right: -105px
+  grid-template-columns: 80px 190px
+  grid-template-rows: 1fr
+  grid-gap: 20px
+  align-items: center
+  z-index: 1
+  &>*
+    align-self: center
+.play-popup
+  display: block
+  width: 80px
+  height: 80px
+  cursor: pointer
+.play-popup-title
+  font-size: 18px
+  color: $black
+  font-weight: bold
+  display: block
+.advantages-list
+  grid-template-columns: 1fr 1fr 1fr
+  grid-template-rows: 1fr
+  grid-gap: 30px
+.advantages-list-item
+  grid-template-columns: 50px 1fr
+  grid-template-rows: 1fr
+  grid-gap: 15px
+  justify-content: start
+.advantages-title
+  color: $black
+  font-weight: bold
+/* Lead form */
+.lead-form-banner
+  margin-top: -140px
+  background: #FFFFFF
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+  padding: 30px
+.lead-form-title
+  font-size: 26px
+  margin: 0
+.lead-form-banner-header
+  grid-template-columns: 1fr 3.5fr
+  grid-template-rows: 1fr
+  grid-gap: 15px
+  align-items: center
+  margin-bottom: 32px
+  &>*
+    align-self: center
+.lead-form-content
+  p
+    margin-bottom: 0
+.lead-form-banner-footer
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  grid-template-rows: 1fr
+  grid-gap: 10px
+//All services
+.all-services
+  padding: 97px 0 55px 0
+  margin-top: -42px
+.all-services-list
+  flex-wrap: wrap
+  margin: 55px 0.7% 0 0.7%
+  justify-content: flex-start
+.all-services-list-item
+  flex: 1 0 205px
+  border-radius: 3px
+  background-color: $white
+  position: relative
+  margin: 0.7%
+  &>a
+    display: block
+    text-decoration: none
+    &:hover
+      border-bottom: 0
+      text-decoration: none
+      color: $blue
+.all-services-img
+  height: 120px
+  width: 100%
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+.all-services-title
+  text-align: center
+  text-decoration: none
+  color: $black
+  padding: 20px 15px
+  &:hover
+    color: $blue
+.all-services-sale
+  display: block
+  width: 60px
+  height: 30px
+  text-align: center
+  color: $white
+  font-weight: bold
+  background: #73E0A5
+  border-radius: 3px
+  line-height: 30px
+  position: absolute
+  right: 20px
+  top: -15px
+/* Why we */
+.why-we
+  padding: 55px 0
+.why-we-advantages
+  justify-content: flex-start
+  margin: 55px -.7% 0 -.7%
+.why-we-advantages-title
+  font-size: 18px
+  margin: 0
+.advantages-text
+  margin-top: 10px
+.advantages-banner
+  margin-top: 55px
+  background-repeat: no-repeat
+  background-size: cover
+  padding: 0 30px
+  grid-template-columns: 1fr 1fr 1.5fr
+  grid-template-rows: 1fr
+  grid-gap: 30px
+.advantages-list-item
+  flex: 1 0 420px
+  margin: 0.7%
+.advantages-banner-text
+  font-size: 16px
+  line-height: 22px
+  color: $black
+  padding: 40px 0
+.advantages-banner-sale
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  background-position: center
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr
+.advantages-banner-sale-title
+  color: $white
+  font-size: 30px
+  line-height: 30px
+  display: flex
+  align-items: center
+  padding-left: 60px
+.advantages-banner-sale-number
+  color: $white
+  font-size: 96px
+  font-weight: bold
+  display: flex
+  align-items: center
+  padding-left: 10px
+.projects-slider
+  margin-top: 55px
+//Projects slider
+.projects-slider
+  position: relative
+  .slick-track
+    display: flex
+.slider-btn
+  display: block
+  background: url('../img/icons/right.svg') no-repeat center/cover
+  width: 38px
+  height: 26px
+  cursor: pointer
+  position: absolute
+  top: 50%
+  z-index: 1
+.slider-btn-left
+  left: 5px
+.slider-btn-right
+  transform: rotate(180deg)
+  right: 5px
+.projects-slider-item
+  height: auto
+.projects-slider-wrapper
+  padding: 0 30px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  height: 100%
+.projects-slider-content
+  height: 100%
+  width: 40%
+  padding: 20px
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.projects-slider-title
+  margin: 0
+  color: $black
+.projects-slider-text
+  max-width: 225px
+  margin-top: 30px
+  margin-bottom: 30px
+  color: #7C7C7C
+.project-slider-url
+  background: #C24040
+  border-radius: 3px
+  display: block
+  width: 118px
+  height: 30px
+  line-height: 30px
+  text-align: center
+  text-decoration: none
+  border-bottom: 0
+  color: $white
+  font-weight: bold
+  margin-right: 15px
+  &:hover
+    border-bottom: 0
+.projects-slider-info
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: 40px
+.projects-slider-price
+  color: $black
+  font-weight: bold
 @import 'media'
