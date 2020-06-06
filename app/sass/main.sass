@@ -103,7 +103,7 @@ body
       background: #efefef
       line-height: 105px
   p
-    margin-bottom: 30px
+    margin-bottom: 14px
 //Titles
 h1,h2,h3,h4,h5,.h1-title,.h2-b-title,.h3-title,.h4-title,.h5-title,blockquote
   margin: 10px 0
@@ -377,6 +377,7 @@ section.white-bg,div.white-bg
 .popup-header
   margin-bottom: 25px
   position: relative
+  align-items: center
 .popup-close
   position: absolute
   top: 0
@@ -436,6 +437,28 @@ section.white-bg,div.white-bg
     width: 100%
   .lead-form-check
     height: fit-content
+.popup-reviews
+  .popup-close
+    position: static
+.popup-review-main
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+  grid-template-rows: 350px
+  margin-bottom: 30px
+.popup-reviews-content-container
+  grid-template-columns: 1.5fr 2fr
+  grid-template-rows: 1fr
+  grid-gap: 20px
+  align-items: center
+.popup-reviews-subtitle
+  margin: 0
+.popup-content
+  margin-bottom: 0
+.popup-reviews-form-top
+  margin: 30px 0 20px 0
+  grid-template-columns: repeat(4,1fr)
+  grid-template-rows: 1fr
+  grid-gap: 20px
 //Header
 .header-top
   padding: 25px 0
@@ -893,6 +916,7 @@ section.white-bg,div.white-bg
 .window-size-text
   color: $black
   text-align: center
+  display: block
 .window-repair-container
   grid-template-columns: 1.5fr 1fr
   grid-gap: 10px
@@ -919,8 +943,120 @@ section.white-bg,div.white-bg
   grid-template-columns: 1fr 1fr
   grid-gap: 15px
   align-items: center
+.window-repair-item > *
+  align-self: center
 .window-calc-submit
   width: 100%
   height: 67px
   line-height: 67px
+/*Our cases*/
+.our-cases
+  padding: 40px 0
+.our-cases-list
+  margin-top: 60px
+.our-cases-list-item
+  grid-template-columns: 2.5fr 1.5fr
+  grid-gap: 20px
+  &:not(:last-child)
+    margin-bottom: 60px
+.our-cases-list-gallery
+  grid-template-columns: 3.5fr 1fr
+  grid-template-rows: 1fr
+  grid-gap: 20px
+.our-cases-list-gallery-main
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+.our-cases-list-gallery-img
+  height: calc(100%/3.3)
+  &:not(:last-child)
+    margin-bottom: 20px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+.our-cases-slider-title
+  margin: 0
+.our-cases-slider-play
+  color: $blue
+  cursor: pointer
+/*Our partners*/
+.our-partners-list
+  grid-template-columns: repeat(6,1fr)
+  grid-template-rows: 1fr
+  grid-gap: 20px
+  align-items: center
+  padding: 20px 0
+/*How work*/
+.how-we-work
+  padding: 60px 0
+.how-we-work-list
+  margin-top: 70px
+  grid-template-columns: repeat(6,1fr)
+  grid-template-rows: 1fr
+  grid-gap: 20px
+.how-we-work-img
+  width: 60px
+  height: 60px
+  margin: 0 auto
+.how-we-work-title-container
+  margin: 20px 0
+  grid-template-columns: 20px 1fr
+  grid-gap: 20px
+  grid-template-rows: 1fr
+  align-items: center
+.how-we-work-number
+  width: 30px
+  height: 30px
+  text-align: center
+  line-height: 30px
+  background: #F5F5F5
+  color: $blue
+  font-size: 18px
+  font-weight: bold
+  border-radius: 50%
+.how-we-work-title
+  color: $black
+  font-size: 18px
+  font-weight: bold
+/*Service price*/
+.services-price
+  padding-bottom: 55px
+.services-price-list
+  margin-top: 55px
+.services-price-list
+  grid-template-columns: 1fr 3fr
+  grid-gap: 44px
+.services-price-menu-item
+  padding: 20px 30px
+  margin-bottom: 10px
+  font-size: 18px
+  cursor: pointer
+  &:not(.active)
+    color: $black
+    background: #FFFFFF
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)
+    border-radius: 3px
+  &.active
+    background: url(../img/_src/services-price/active.png) no-repeat top/100%
+    color: $white
+.services-price-container
+  display: none
+  &.active
+    display: block
+.services-list-price-table-tr
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 10px
+  grid-template-rows: 1fr
+  padding: 10px 0
+  &:not(:last-child)
+    border-bottom: 1px solid #F0F0F0
+.services-list-price-table-prices
+  text-align: right
+.red-price
+  color: $red
+  font-weight: bold
+.service-price-list-title
+  margin-bottom: 33px
 @import 'media'

@@ -259,6 +259,46 @@ document.addEventListener("DOMContentLoaded", function() {
        }
        calculatorSizes('.window-size-width','data-number-item','.window-type-window-width');
        calculatorSizes('.window-size-height','data-number-item','.window-type-window-height');
-    })
+    });
+    //Reviews video
+    if($('.our-cases-slider-play').length>0) {
+        let count = 0;
+        $('.our-cases-slider-play').click(function () {
+            let currentVideo = $(this).attr('data-video'), currentImg = $(this).attr('data-img'),currentText = $(this).next('.our-cases-slider-content').html();
+            $('.popup-reviews-content').html(currentText);
+            $('.popup-reviews-video').attr('data-youtube', currentVideo).attr('data-youtube-img', currentImg).addClass('youtube');
+            youtubeChange();
+        });
+    }
+    togglePopup('.our-cases-slider-play','.popup-reviews');
+    $('.popup-reviews .popup-close').click(function () {
+        $('.popup-reviews-content').html('');
+        $('.popup-reviews-video').attr('data-youtube', '').attr('data-youtube-img', '').removeClass('youtube').find('.youtube-container').remove();
+    });
+    //How work
+    if($('.how-we-work-number').length>0){
+        let count = 0;
+        $('.how-we-work-number').each(function () {
+            count+=1;
+            $(this).text(count);
+        });
+    }
+    //Service prices
+    if($('.services-price-container').length>0){
+        let containerItem = document.querySelectorAll('.services-price-container'),menuItem = document.querySelectorAll('.services-price-menu-item');
+        for(let i = 0;i<containerItem.length;i++){
+            menuItem[i].setAttribute('data-item-price',`price-container-${i}`);
+            containerItem[i].setAttribute('id',`price-container-${i}`);
+        }
+    }
+    if($('.services-price-menu-item').length>0){
+        $('.services-price-menu-item:first-child').addClass('active');
+        $('.services-price-container:first-child').addClass('active');
+        $('.services-price-menu-item').click(function () {
+            let currentItem = $(this).attr('data-item-price');
+            $(this).addClass('active').siblings().removeClass('active');
+            $(`#${currentItem}`).addClass('active').siblings().removeClass('active');
+        })
+    }
 });
 
