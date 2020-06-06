@@ -17,6 +17,34 @@ document.addEventListener("DOMContentLoaded", function() {
             })
         }
     };
+    //Calculator check
+    const calculatorLabelChecker = (item,input,label,name) =>{
+        if($(item).length>0){
+            let count = 1;
+            $(item).each(function () {
+                count+=1;
+                $(this).find(input).attr('id',`${name}-${count}`);
+                $(this).find(label).attr('for',`${name}-${count}`);
+            })
+        }
+    };
+    //Calculator checkboxes
+    const calculatorCheckox = (item,dataType) =>{
+        if($(item).length>0){
+            let currentValue = '';
+            $(item).click(function () {
+                let checkedValue = $(this).val()+' ',newValue;
+                if($(this).is(':checked')){
+                    currentValue += $(this).val()+' ';
+                    $('.window-calc-submit').attr(dataType,`${currentValue}`);
+                }else{
+                    newValue = currentValue.replace(`${checkedValue}`,'');
+                    currentValue = newValue;
+                    $('.window-calc-submit').attr(dataType,`${currentValue}`);
+                }
+            })
+        }
+    };
     //Youtube video
     const youtubeChange = ()=>{
         if($('.youtube').length>0){
@@ -180,5 +208,18 @@ document.addEventListener("DOMContentLoaded", function() {
             ]
         })
     }
+    //Calculator
+    calculatorLabelChecker('.window-type-item','.lead-form-checkbox','.lead-form-checkbox-label','window-type');
+    calculatorLabelChecker('.window-size-checkbox-item','.lead-form-checkbox','.lead-form-checkbox-label','window-size');
+    if($('.window-size-checkbox-container').length>0){
+        $('.window-size-checkbox-container').each(function () {
+            if($(this).find('.window-size-checkbox-item').length == 2){
+                $(this).find('.window-size-checkbox-item:last-child').css({'margin-left':'0'});
+                $(this).find('.window-size-checkbox-item:first-child').css({'margin-right':'15px'});
+            }
+        })
+    }
+    calculatorCheckox('.window-type-item .lead-form-checkbox','data-type');
+    calculatorCheckox('.window-size-checkbox','data-type-window');
 });
 

@@ -277,7 +277,6 @@ section.white-bg,div.white-bg
 //Forms
 .lead-form-item
   border-radius: 3px
-  background-color: $white
   border: 1px solid #EBEBEB
   padding: 0 14px
   color: #9C9C9C
@@ -308,7 +307,7 @@ section.white-bg,div.white-bg
 .lead-form-check
   border: none
 .lead-form-checkbox:checked + .lead-form-checkbox-label::before
-    background: url('../img/icons/form-done.svg') no-repeat center/contain
+    background: url('../img/icons/form-done.svg') no-repeat center/contain $white
 .lead-form-checkbox-label
   display: flex
   align-items: center
@@ -318,9 +317,11 @@ section.white-bg,div.white-bg
     border: 1px solid #EBEBEB
     box-sizing: border-box
     border-radius: 3px
-    width: 28px
+    width: 20px
+    min-width: 20px
     height: 20px
     vertical-align: sub
+    background-color: $white
 .lead-form-checkbox-text
   display: inline-block
   line-height: 20px
@@ -328,6 +329,23 @@ section.white-bg,div.white-bg
   a
     color: $blue
     text-decoration: underline
+.lead-form-radio
+  display: none
+  &:checked + .lead-form-radio-label::before
+    background: $blue-gradient
+.lead-form-radio-label
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  &::before
+    content: ''
+    display: block
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    box-shadow: 0 0 0 3px #fff, 0 0 0 1px #EBEBEB
+    background-color: white
+    margin-right: 12px
 //Popup
 .popup
   position: fixed
@@ -715,4 +733,140 @@ section.white-bg,div.white-bg
 .projects-slider-price
   color: $black
   font-weight: bold
+/* Master lead */
+.master-lead
+  margin: 60px auto 31px auto
+.master-lead-container
+  margin-top: 55px
+  grid-template-columns: 4fr 1fr 4fr
+  grid-template-rows: 1fr
+  background: #FFFFFF
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+.master-lead-list
+  padding: 30px 0 30px 50px
+  justify-content: flex-start
+  grid-template-columns: repeat(2,1fr)
+  grid-template-rows: repeat(3,1fr)
+  grid-gap: 15px
+.master-lead-item
+  grid-template-columns: 42px 230px
+  grid-template-rows: 1fr
+  grid-gap: 15px
+.master-lead-done
+  background: #FAFAFA
+  width: 43px
+  height: 44px
+  text-align: center
+  line-height: 44px
+  border-radius: 50%
+.master-lead-img
+  position: relative
+  img
+    position: absolute
+    width: 264px
+    left: -85px
+    top: -14px
+    display: block
+    max-width: inherit
+.lead-form-master-container
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 1fr 1fr
+  grid-gap: 30px
+.master-lead-form
+  padding: 30px 50px 30px 0
+.master-lead-submit
+  grid-column-start: 1
+  grid-column-end: 3
+  width: auto
+/*Calculator*/
+.window-calc
+  padding: 55px 0
+.window-calc-container
+  margin-top: 55px
+.window-calc-title
+  font-size: 18px
+  line-height: 21px
+  color: #7C7C7C
+.window-type-list
+  margin: 10px 0 55px 0
+  grid-template-columns: repeat(4,1fr)
+  grid-gap: 20px
+  grid-template-rows: repeat(2,1fr)
+.window-type-item
+  .lead-form-checkbox-label
+    &::before
+      margin-right: 15px
+.window-size
+  margin: 10px 0 55px 0
+  grid-template-columns: repeat(6,1fr)
+  grid-gap: 20px
+  grid-template-rows: 1fr
+.window-size-item
+  background-color: $white
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+  padding: 20px
+  flex-direction: column
+  justify-content: space-between
+.window-size-img
+  text-align: center
+  position: relative
+.window-size-checkbox-container
+  position: absolute
+  width: 100%
+  top: 15%
+.window-size-label
+  flex-direction: column
+  color: $white
+  &::before
+    order: 2
+.window-size-checkbox-item
+  margin: 0 auto
+.window-sizes
+  margin-top: 25px
+.window-sizes-item
+  grid-template-columns: 80px 70px
+  grid-template-rows: 33px
+  grid-gap: 10px
+  margin-bottom: 20px
+.window-size-input
+  background: #FFFFFF
+  border: 1px solid #EBEBEB
+  border-radius: 3px
+  &:focus,&:hover
+    border: 1px solid #EBEBEB
+.window-size-text
+  color: $black
+  text-align: center
+.window-repair-container
+  grid-template-columns: 1.5fr 1fr
+  grid-gap: 10px
+  grid-template-rows: 1fr
+  margin-top: 10px
+.window-repair-radio-item
+  margin-bottom: 25px
+  justify-content: start
+  align-items: center
+.window-repair-radio-dest
+  background: #FFFFFF
+  border: 1px solid #EBEBEB
+  border-radius: 3px
+  width: 60px
+  height: 33px
+  margin: 0 5px
+.window-repair-radio-dest-text
+  width: 10px
+  display: block
+  word-break: break-word
+  text-align: center
+  line-height: 16px
+.window-repair-item
+  grid-template-columns: 1fr 1fr
+  grid-gap: 15px
+  align-items: center
+.window-calc-submit
+  width: 100%
+  height: 67px
+  line-height: 67px
 @import 'media'

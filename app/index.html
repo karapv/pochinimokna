@@ -344,7 +344,7 @@
 			<h2 class="subtitle master-lead-title">Когда необходим вызов мастера</h2>
 			<div class="grid-container master-lead-container">
 				<div class="master-lead-item">
-					<ul class="master-lead-list">
+					<ul class="grid-container master-lead-list">
 						<li class="grid-container master-lead-item">
 							<div class="master-lead-done"><img data-src="img/icons/master-done.svg" class="lazy" alt="master"></div>
 							<div class="master-lead-text">Неплотно или не герметично закрываются створки и дует из окон</div>
@@ -372,7 +372,7 @@
 					</ul>
 				</div>
 				<div class="master-lead-item master-lead-img"><img data-src="img/icons/master.png" class="lazy" alt="master"></div>
-				<div class="master-lead-item">
+				<div class="master-lead-item master-lead-form">
 					<div class="grid-container lead-form-master-container">
 						<div class="lead-form-item">
 							<input type="text" class="lead-form-input" placeholder="Ваше имя">
@@ -390,7 +390,7 @@
 								<span class="lead-form-checkbox-text">Согласие на обработку <a href="#">персональных данных</a></span>
 							</label>
 						</div>
-						<input type="submit" class="btn btn-blue lead-form-submit" value="Вызвать мастера">
+						<input type="submit" class="btn btn-blue lead-form-submit master-lead-submit" value="Вызвать мастера">
 					</div>
 				</div>
 			</div>
@@ -399,54 +399,54 @@
 	<!-- Calculator -->
 	<section class="window-calc grey-bg">
 		<div class="container">
-			<h2 class="subtitle"></h2>
+			<h2 class="subtitle">Калькулятор стоимости ремонта окон</h2>
 			<div class="window-calc-container">
 				<div class="window-calc-container-item window-type-container">
 					<span class="window-calc-title"><strong>1.</strong> Какой вид ремонта нужен окну?</span>
-					<div class="grid-container">
+					<div class="grid-container window-type-list">
 						<div class="grid-container window-type-item">
-							<input type="checkbox" class="lead-form-checkbox">
+							<input type="checkbox" class="lead-form-checkbox" value="Регулировка">
 							<label for="" class="lead-form-checkbox-label">Регулировка</label>
 						</div>
 						<div class="grid-container window-type-item">
-							<input type="checkbox" class="lead-form-checkbox">
+							<input type="checkbox" class="lead-form-checkbox" value="Замена ручки">
 							<label for="" class="lead-form-checkbox-label">Замена ручки</label>
 						</div>
 						<div class="grid-container window-type-item">
-							<input type="checkbox" class="lead-form-checkbox">
+							<input type="checkbox" class="lead-form-checkbox" value="Замена уплотнителя">
 							<label for="" class="lead-form-checkbox-label">Замена уплотнителя</label>
 						</div>
 						<div class="grid-container window-type-item">
-							<input type="checkbox" class="lead-form-checkbox">
+							<input type="checkbox" class="lead-form-checkbox" value="Установка ограничителя">
 							<label for="" class="lead-form-checkbox-label">Установка ограничителя</label>
 						</div>
 						<div class="grid-container window-type-item">
-							<input type="checkbox" class="lead-form-checkbox">
+							<input type="checkbox" class="lead-form-checkbox" value="Пропенка отливов">
 							<label for="" class="lead-form-checkbox-label">Пропенка отливов</label>
 						</div>
 						<div class="grid-container window-type-item">
-							<input type="checkbox" class="lead-form-checkbox">
+							<input type="checkbox" class="lead-form-checkbox" value="Сервисное обслуживание">
 							<label for="" class="lead-form-checkbox-label">Сервисное обслуживание</label>
 						</div>
 						<div class="grid-container window-type-item">
-							<input type="checkbox" class="lead-form-checkbox">
+							<input type="checkbox" class="lead-form-checkbox" value="Установка подоконника">
 							<label for="" class="lead-form-checkbox-label">Установка подоконника</label>
 						</div>
 						<div class="grid-container window-type-item">
-							<input type="checkbox" class="lead-form-checkbox">
+							<input type="checkbox" class="lead-form-checkbox" value="Откосы из сендвич-панелей">
 							<label for="" class="lead-form-checkbox-label">Откосы из сендвич-панелей</label>
 						</div>
 					</div>
 				</div>
 				<div class="window-calc-container-item window-size-container">
 					<span class="window-calc-title"><strong>2.</strong> Выберите вид окна и укажите его параметры</span>
-					<div class="window-size">
-						<div class="window-size-item">
+					<div class="grid-container window-size">
+						<div class="flex-container window-size-item">
 							<div class="window-size-img">
 								<div class="flex-container window-size-checkbox-container">
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Первый тип окон. Одно окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 								</div>
 								<img data-src="img/_src/main-page/calculator/window-1.jpg" class="lazy" alt="window">
@@ -462,16 +462,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="window-size-item">
+						<div class="flex-container window-size-item">
 							<div class="window-size-img">
 								<div class="flex-container window-size-checkbox-container">
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Второй тип окон. Первое окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Второй тип окон. Второе окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 								</div>
 								<img data-src="img/_src/main-page/calculator/window-2.jpg" class="lazy" alt="window">
@@ -487,20 +487,20 @@
 								</div>
 							</div>
 						</div>
-						<div class="window-size-item">
+						<div class="flex-container window-size-item">
 							<div class="window-size-img">
 								<div class="flex-container window-size-checkbox-container">
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Третий тип окон.Первое окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Третий тип окон.Второе окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Третий тип окон.Третье окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 								</div>
 								<img data-src="img/_src/main-page/calculator/window-3.jpg" class="lazy" alt="window">
@@ -516,16 +516,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="window-size-item">
+						<div class="flex-container window-size-item">
 							<div class="window-size-img">
 								<div class="flex-container window-size-checkbox-container">
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Четвертый тип окон. Первое окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Четвертый тип окон. Второе окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 								</div>
 								<img data-src="img/_src/main-page/calculator/window-4.jpg" class="lazy" alt="window">
@@ -541,16 +541,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="window-size-item">
+						<div class="flex-container window-size-item">
 							<div class="window-size-img">
 								<div class="flex-container window-size-checkbox-container">
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Пятый тип окон. Первое окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Пятый тип окон. Второе окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 								</div>
 								<img data-src="img/_src/main-page/calculator/window-5.jpg" class="lazy" alt="window">
@@ -566,16 +566,20 @@
 								</div>
 							</div>
 						</div>
-						<div class="window-size-item">
+						<div class="flex-container flex-container window-size-item">
 							<div class="window-size-img">
 								<div class="flex-container window-size-checkbox-container">
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Шестой тип окон. Первое окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
-										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
 									</div>
 									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Шестой тип окон. Второе окно открывается">
 										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+									<div class="window-size-checkbox-item">
 										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
 									</div>
 								</div>
 								<img data-src="img/_src/main-page/calculator/window-6.jpg" class="lazy" alt="window">
@@ -599,15 +603,15 @@
 						<div class="window-repair-item">
 							<div class="window-repair-radio-container">
 								<div class="grid-container window-repair-radio-item">
-									<input type="radio" class="window-repair-radio">
-									<label for="" class="window-repair-radio-label">За пределами города</label>
+									<input type="checkbox" id="window-repair-radio-1" class="lead-form-radio window-repair-radio">
+									<label for="window-repair-radio-1" class="lead-form-radio-label window-repair-radio-label">За пределами города</label>
 								</div>
 							</div>
 							<div class="window-repair-radio-container">
-								<div class="grid-container window-repair-radio-item">
-									<input type="radio" class="window-repair-radio">
-									<label for="" class="window-repair-radio-label">За городом</label>
-									<input type="number" class="window-repair-radio-dest">
+								<div class="flex-container window-repair-radio-item">
+									<input type="checkbox" id="window-repair-radio-2" class="lead-form-radio window-repair-radio">
+									<label for="window-repair-radio-2" class="lead-form-radio-label window-repair-radio-label">За городом</label>
+									<input type="text" class="window-repair-radio-dest">
 									<span class="window-repair-radio-dest-text">км</span>
 								</div>
 							</div>
@@ -619,7 +623,7 @@
 									<span class="lead-form-checkbox-text">Согласие на обработку <a href="#">персональных данных</a></span>
 								</label>
 							</div>
-							<span class="btn btn-blue window-calc-submit" value="Вызвать мастера"></span>
+							<span class="btn btn-blue window-calc-submit">Вызвать мастера</span>
 						</div>
 					</div>
 				</div>
