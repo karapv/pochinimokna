@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if($(item).length>0){
             let currentValue = '';
             $(item).click(function () {
-                let checkedValue = $(this).val()+' ',newValue;
+                let checkedValue = $(this).val()+', ',newValue;
                 if($(this).is(':checked')){
-                    currentValue += $(this).val()+' ';
+                    currentValue += $(this).val()+', ';
                     $('.window-calc-submit').attr(dataType,`${currentValue}`);
                 }else{
                     newValue = currentValue.replace(`${checkedValue}`,'');
@@ -45,6 +45,18 @@ document.addEventListener("DOMContentLoaded", function() {
             })
         }
     };
+    //Calculator sizes
+    const calculatorSizes = (item,data,input)=>{
+        if($(item).length>0){
+            let currentValue = '';
+            $(item).each(function () {
+                if($(this).val() !== '') {
+                    currentValue += $(this).val() + ' ' + $(this).attr(data);
+                    $(input).val(currentValue);
+                }
+            })
+        }
+    }
     //Youtube video
     const youtubeChange = ()=>{
         if($('.youtube').length>0){
@@ -208,6 +220,11 @@ document.addEventListener("DOMContentLoaded", function() {
             ]
         })
     }
+    //Popups
+    togglePopup('.btn-master','.popup-master');
+    togglePopup('.window-calc-submit','.popup-master');
+    togglePopup('.btn-write','.popup-write');
+    togglePopup('.btn-call','.popup-call');
     //Calculator
     calculatorLabelChecker('.window-type-item','.lead-form-checkbox','.lead-form-checkbox-label','window-type');
     calculatorLabelChecker('.window-size-checkbox-item','.lead-form-checkbox','.lead-form-checkbox-label','window-size');
@@ -221,5 +238,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     calculatorCheckox('.window-type-item .lead-form-checkbox','data-type');
     calculatorCheckox('.window-size-checkbox','data-type-window');
+    calculatorCheckox('.window-repair-radio','data-delivery');
+    if($('.window-size-input').length>0){
+        let count = 0;
+        $('.window-sizes').each(function () {
+            count+=1;
+            $(this).find('.window-size-width').attr('data-number-item',`Размер ширины из блока ${count}`);
+            $(this).find('.window-size-height').attr('data-number-item',`Размер высоты из блока ${count}`);
+        });
+    }
+    $('.window-calc-submit').click(function () {
+       if($(this).attr('data-type')){
+           $('.window-type-repair').val($(this).attr('data-type'));
+       }
+       if($(this).attr('data-type-window')){
+           $('.window-type-window').val($(this).attr('data-type-window'));
+       }
+       if($(this).attr('data-delivery')){
+           $('.window-type-window-delivery').val($(this).attr('data-delivery').replace(',','')+' '+$('.window-repair-radio-dest').val()+'км');
+       }
+       calculatorSizes('.window-size-width','data-number-item','.window-type-window-width');
+       calculatorSizes('.window-size-height','data-number-item','.window-type-window-height');
+    })
 });
 

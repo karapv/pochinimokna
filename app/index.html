@@ -453,11 +453,11 @@
 							</div>
 							<div class="window-sizes">
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
+									<input type="text" class="window-size-input window-size-width">
 									<span class="window-size-text"> Ширина, мм</span>
 								</div>
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
+									<input type="text" class="window-size-input window-size-height">
 									<span class="window-size-text"> Высота, мм</span>
 								</div>
 							</div>
@@ -478,10 +478,10 @@
 							</div>
 							<div class="window-sizes">
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
+									<input type="text" class="window-size-input window-size-width">
 									<span class="window-size-text"> Ширина, мм</span>
 								</div>
-								<div class="grid-container window-sizes-item">
+								<div class="grid-container window-sizes-item window-size-height">
 									<input type="text" class="window-size-input">
 									<span class="window-size-text"> Высота, мм</span>
 								</div>
@@ -507,11 +507,11 @@
 							</div>
 							<div class="window-sizes">
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
+									<input type="text" class="window-size-input window-size-width">
 									<span class="window-size-text"> Ширина, мм</span>
 								</div>
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
+									<input type="text" class="window-size-input window-size-height">
 									<span class="window-size-text"> Высота, мм</span>
 								</div>
 							</div>
@@ -532,10 +532,10 @@
 							</div>
 							<div class="window-sizes">
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
+									<input type="text" class="window-size-input window-size-width">
 									<span class="window-size-text"> Ширина, мм</span>
 								</div>
-								<div class="grid-container window-sizes-item">
+								<div class="grid-container window-sizes-item window-size-height">
 									<input type="text" class="window-size-input">
 									<span class="window-size-text"> Высота, мм</span>
 								</div>
@@ -557,10 +557,10 @@
 							</div>
 							<div class="window-sizes">
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
+									<input type="text" class="window-size-input window-size-width">
 									<span class="window-size-text"> Ширина, мм</span>
 								</div>
-								<div class="grid-container window-sizes-item">
+								<div class="grid-container window-sizes-item window-size-height">
 									<input type="text" class="window-size-input">
 									<span class="window-size-text"> Высота, мм</span>
 								</div>
@@ -586,11 +586,11 @@
 							</div>
 							<div class="window-sizes">
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
-									<span class="window-size-text"> Ширина, мм</span>
+									<input type="text" class="window-size-input window-size-width">
+                                    <span class="window-size-text"> Ширина, мм</span>
 								</div>
 								<div class="grid-container window-sizes-item">
-									<input type="text" class="window-size-input">
+									<input type="text" class="window-size-input window-size-height">
 									<span class="window-size-text"> Высота, мм</span>
 								</div>
 							</div>
@@ -603,13 +603,13 @@
 						<div class="window-repair-item">
 							<div class="window-repair-radio-container">
 								<div class="grid-container window-repair-radio-item">
-									<input type="checkbox" id="window-repair-radio-1" class="lead-form-radio window-repair-radio">
+									<input type="checkbox" id="window-repair-radio-1" class="lead-form-radio window-repair-radio" value="За пределами города">
 									<label for="window-repair-radio-1" class="lead-form-radio-label window-repair-radio-label">За пределами города</label>
 								</div>
 							</div>
 							<div class="window-repair-radio-container">
 								<div class="flex-container window-repair-radio-item">
-									<input type="checkbox" id="window-repair-radio-2" class="lead-form-radio window-repair-radio">
+									<input type="checkbox" id="window-repair-radio-2" class="lead-form-radio window-repair-radio" value="За городом">
 									<label for="window-repair-radio-2" class="lead-form-radio-label window-repair-radio-label">За городом</label>
 									<input type="text" class="window-repair-radio-dest">
 									<span class="window-repair-radio-dest-text">км</span>
@@ -1281,6 +1281,11 @@
 							<span class="lead-form-checkbox-text">Согласие на обработку <a href="#">персональных данных</a></span>
 						</label>
 					</div>
+					<input type="hidden" class="window-type-repair">
+					<input type="hidden" class="window-type-window">
+					<input type="hidden" class="window-type-window-width">
+					<input type="hidden" class="window-type-window-height">
+					<input type="hidden" class="window-type-window-delivery">
 					<input type="submit" class="btn btn-red lead-form-submit popup-master-form-submit" value="Перезвоните мне">
 				</div>
 			</footer>
