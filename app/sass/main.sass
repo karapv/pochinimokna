@@ -265,6 +265,8 @@ section.white-bg,div.white-bg
     width: 80px
     height: 80px
     border-radius: 50%
+    order: -1
+    margin-right: 20px
   .youtube-text
     font-weight: bold
     font-size: 24px
@@ -373,7 +375,7 @@ section.white-bg,div.white-bg
   border-radius: 3px
   iframe
     width: 100%
-    height: 400px
+    height: 350px
 .popup-header
   margin-bottom: 25px
   position: relative
@@ -431,13 +433,15 @@ section.white-bg,div.white-bg
   grid-template-rows: repeat(2,1fr)
   grid-gap: 30px
   align-items: center
-  &>*
+  >*
     align-self: center
   .popup-call-form-submit
     width: 100%
   .lead-form-check
     height: fit-content
 .popup-reviews
+  .popup-content
+    margin-bottom: 0
   .popup-close
     position: static
 .popup-review-main
@@ -450,10 +454,10 @@ section.white-bg,div.white-bg
   grid-template-rows: 1fr
   grid-gap: 20px
   align-items: center
+  >*
+    align-self: center
 .popup-reviews-subtitle
   margin: 0
-.popup-content
-  margin-bottom: 0
 .popup-reviews-form-top
   margin: 30px 0 20px 0
   grid-template-columns: repeat(4,1fr)
@@ -469,8 +473,8 @@ section.white-bg,div.white-bg
   grid-template-rows: 1fr
   grid-gap: 30px
   align-items: center
-.header-top-container>*
-  align-self: center
+  >*
+    align-self: center
 .logo
   grid-template-columns: 62px 100px
   grid-template-rows: 1fr
@@ -597,7 +601,7 @@ section.white-bg,div.white-bg
   grid-gap: 20px
   align-items: center
   z-index: 1
-  &>*
+  >*
     align-self: center
 .play-popup
   display: block
@@ -637,7 +641,7 @@ section.white-bg,div.white-bg
   grid-gap: 15px
   align-items: center
   margin-bottom: 32px
-  &>*
+  >*
     align-self: center
 .lead-form-content
   p
@@ -755,7 +759,7 @@ section.white-bg,div.white-bg
   height: 26px
   cursor: pointer
   position: absolute
-  top: 50%
+  top: 45%
   z-index: 1
 .slider-btn-left
   left: 5px
@@ -926,6 +930,8 @@ section.white-bg,div.white-bg
   margin-bottom: 25px
   justify-content: start
   align-items: center
+  >*
+    align-self: center
 .window-repair-radio-dest
   background: #FFFFFF
   border: 1px solid #EBEBEB
@@ -943,8 +949,8 @@ section.white-bg,div.white-bg
   grid-template-columns: 1fr 1fr
   grid-gap: 15px
   align-items: center
-.window-repair-item > *
-  align-self: center
+  >*
+    align-self: center
 .window-calc-submit
   width: 100%
   height: 67px
@@ -957,6 +963,7 @@ section.white-bg,div.white-bg
 .our-cases-list-item
   grid-template-columns: 2.5fr 1.5fr
   grid-gap: 20px
+  grid-template-rows: 1fr
   &:not(:last-child)
     margin-bottom: 60px
 .our-cases-list-gallery
@@ -988,6 +995,8 @@ section.white-bg,div.white-bg
   grid-gap: 20px
   align-items: center
   padding: 20px 0
+  >*
+    align-self: center
 /*How work*/
 .how-we-work
   padding: 60px 0
@@ -1006,6 +1015,8 @@ section.white-bg,div.white-bg
   grid-gap: 20px
   grid-template-rows: 1fr
   align-items: center
+  >*
+    align-self: center
 .how-we-work-number
   width: 30px
   height: 30px
@@ -1017,6 +1028,7 @@ section.white-bg,div.white-bg
   font-weight: bold
   border-radius: 50%
 .how-we-work-title
+  display: block
   color: $black
   font-size: 18px
   font-weight: bold
@@ -1028,6 +1040,7 @@ section.white-bg,div.white-bg
 .services-price-list
   grid-template-columns: 1fr 3fr
   grid-gap: 44px
+  grid-template-rows: 1fr
 .services-price-menu-item
   padding: 20px 30px
   margin-bottom: 10px
@@ -1059,4 +1072,93 @@ section.white-bg,div.white-bg
   font-weight: bold
 .service-price-list-title
   margin-bottom: 33px
+/*Video message*/
+.video-message
+  padding: 100px 0
+.video-message-container
+  grid-template-columns: repeat(2,1fr)
+  grid-column-gap: 20px
+  grid-template-rows: 1fr
+.video-message-title
+  margin-top: 0
+.video-message-item
+  iframe
+    width: 100%
+    height: 100%
+.video-message-advantages
+  margin-top: 40px
+  grid-template-columns: repeat(4,1fr)
+  grid-template-rows: 1fr
+  grid-gap: 40px
+  text-align: center
+.video-message-advantages-number
+  color: $blue
+  font-size: 2.5rem
+  line-height: 24px
+  margin-bottom: 10px
+.video-message-advantages-text
+  color: $black
+/*Employees*/
+.employees
+  padding: 70px 0 48px 0
+.employees-slider
+  margin-top: 82px
+  .slick-track
+    padding: 15px 0
+  .slider-btn-right
+    right: -3%
+  .slider-btn-left
+    left: -3%
+.employees-slider-container
+  padding: 0 20px
+.employees-img
+  box-shadow: 0 20px 40px rgba(200, 200, 200, 0.3)
+  border-radius: 3px
+  margin-bottom: 30px
+/*Why important */
+.why-important
+  padding: 38px 0 48px 0
+.why-important-list
+  margin-top: 55px
+  grid-template-columns: repeat(4,1fr)
+  grid-template-rows: repeat(2,1fr)
+  grid-gap: 15px
+.why-important-list-item
+  background: #FFFFFF
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+  padding: 20px
+.why-important-number
+  color: #EFEFEF
+  font-size: 120px
+  font-weight: bold
+  line-height: 120px
+.why-important-content
+  margin-top: 33px
+  color: $black
+.why-important-list-item-last
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  box-shadow: none
+  align-content: space-between
+  padding: 30px
+.why-important-title
+  font-weight: bold
+  font-size: 20px
+  line-height: 23px
+  color: $white
+  max-width: 188px
+.why-important-btn
+  background: $white
+  color: $black
+  text-align: center
+  width: 100%
+  height: 65px
+  line-height: 21px
+  display: flex
+  align-items: center
+  justify-content: center
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 3px
 @import 'media'

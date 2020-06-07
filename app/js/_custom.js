@@ -95,18 +95,20 @@ document.addEventListener("DOMContentLoaded", function() {
                         videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].dataset.youtube + 'sddefault.jpg)';
                     }
                     // Размещаем над постером кнопку Play, чтобы создать эффект плеера
-                    const play = document.createElement("div"),
-                        youtubeSettings = document.createElement('div');
-                    if (videos[i].getAttribute('data-youtube-text')) {
-                        const youtubeText = document.createElement('div');
-                        youtubeText.setAttribute('class', 'youtube-text');
-                        youtubeText.textContent = videos[i].getAttribute('data-youtube-text');
-                        youtubeSettings.appendChild(youtubeText);
+                    if(!videos[i].querySelector('.youtube-container')) {
+                        const play = document.createElement("div"),
+                            youtubeSettings = document.createElement('div');
+                        if (videos[i].getAttribute('data-youtube-text')) {
+                            const youtubeText = document.createElement('div');
+                            youtubeText.setAttribute('class', 'youtube-text');
+                            youtubeText.textContent = videos[i].getAttribute('data-youtube-text');
+                            youtubeSettings.appendChild(youtubeText);
+                        }
+                        play.setAttribute("class", "play");
+                        youtubeSettings.setAttribute('class', 'flex-container youtube-container');
+                        youtubeSettings.appendChild(play);
+                        videos[i].appendChild(youtubeSettings);
                     }
-                    play.setAttribute("class", "play");
-                    youtubeSettings.setAttribute('class', 'flex-container youtube-container');
-                    youtubeSettings.appendChild(play);
-                    videos[i].appendChild(youtubeSettings);
                     videos[i].onclick = function () {
                         // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
                         const iframe = document.createElement("iframe");
@@ -298,6 +300,25 @@ document.addEventListener("DOMContentLoaded", function() {
             let currentItem = $(this).attr('data-item-price');
             $(this).addClass('active').siblings().removeClass('active');
             $(`#${currentItem}`).addClass('active').siblings().removeClass('active');
+        })
+    }
+    //Employees slider
+    if($('.employees-slider-item').length>0){
+        $('.employees-slider').slick({
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            prevArrow: '<span class="slider-btn slider-btn-left"></span>',
+            nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
+            responsive: [
+                {
+                    breakpoint: 990,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                }
+            ]
         })
     }
 });
