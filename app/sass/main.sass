@@ -165,9 +165,9 @@ img
   z-index: 2
 #main,#footer,#header
   width: 100%
-section.grey-bg,div.grey-bg
+*.grey-bg
   background-color: #F5F5F5
-section.white-bg,div.white-bg
+*.white-bg
   background-color: $white
 .mobile-block
   display: none !important
@@ -214,7 +214,7 @@ section.white-bg,div.white-bg
   background: linear-gradient(101.04deg, #C24040 0%, #EB7676 100%)
 //Site contact
 .site-contacts
-  grid-template-columns: 40px  150px
+  grid-template-columns: 40px  1fr
   grid-template-rows: 1fr
   grid-gap: 15px
   justify-content: start
@@ -222,7 +222,6 @@ section.white-bg,div.white-bg
   width: 40px
   height: 40px
   line-height: 40px
-  margin-right: 15px
   text-align: center
   color: $red
   font-size: 18px
@@ -237,6 +236,8 @@ section.white-bg,div.white-bg
   font-size: 16px
   line-height: 17px
   border-bottom: 1px solid transparent
+  a
+    word-break: break-word
 .site-contacts-info-text
   text-align: right
   font-size: 10px
@@ -556,8 +557,8 @@ section.white-bg,div.white-bg
   background: #FFFFFF
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
   border-radius: 3px
-  grid-template-columns: 200px 210px 210px 210px 1fr
-  grid-gap: 40px
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr
+  grid-gap: 20px
   grid-template-rows: 1fr
   padding-top: 15px
   padding-bottom: 15px
@@ -1161,4 +1162,82 @@ section.white-bg,div.white-bg
   justify-content: center
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
   border-radius: 3px
+/*FAQ*/
+.faq
+  padding: 40px  0
+.faq-list
+  margin-top: 55px
+.open-accordion,.faq-list-item
+  transition: all 500ms ease-in-out
+.faq-list-item
+  margin-bottom: 25px
+  cursor: pointer
+  padding: 20px
+  &.active
+    background: #FFFFFF
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 3px
+    .faq-list-footer
+      display: block
+    .open-accordion
+      transform: rotate(90deg)
+.faq-list-header
+  grid-template-rows: 1fr
+  grid-template-columns: 7px 1fr
+  grid-gap: 20px
+  align-items: center
+  >*
+    align-self: center
+.faq-list-title
+  font-size: 18px
+  margin: 0
+.faq-list-footer
+  padding: 10px 30px 10px 30px
+  display: none
+.open-accordion
+  color: $blue
+/*Map contacts*/
+.map-contacts
+  position: relative
+  iframe,ymap
+    width: 100%
+    height: 600px
+.maps-contacts-container
+  position: absolute
+  background: #FFFFFF
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+  left: 7%
+  top: 42px
+  padding: 95px 65px
+.maps-contacts-item:not(:last-child)
+  margin-bottom: 40px
+/*Footer*/
+#footer
+  padding: 40px 0
+.footer-menu
+  grid-template-columns: repeat(4,1fr)
+  grid-gap: 15px
+  grid-template-rows: repeat(3,1fr)
+  padding-bottom: 39px
+  border-bottom: 4px solid #ECECEC
+.footer-menu-item
+  &::before
+    content: ''
+    display: inline-block
+    width: 9.63px
+    height: 2px
+    background: #DFDFDF
+    vertical-align: middle
+    margin-right: 10px
+  &:hover
+    &::before
+      background: rgba(39, 122, 122, 0.3)
+  a
+    text-decoration: none
+.footer-bottom
+  margin-top: 40px
+  grid-template-columns: repeat(6,1fr)
+  grid-gap: 25px
+  grid-template-rows: 1fr
 @import 'media'

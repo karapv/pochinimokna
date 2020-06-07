@@ -321,5 +321,11 @@ document.addEventListener("DOMContentLoaded", function() {
             ]
         })
     }
+    //Accordion
+    if($('.faq-list-item').length>0){
+        $('.faq-list-item').click(function () {
+            $(this).toggleClass('active').siblings().removeClass('active');
+        })
+    }
 });
 
