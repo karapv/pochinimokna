@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $(window).resize(function() {
             resize = true;
             if(resize === true) {
-                if ($(window).width() > mobileWidth) {
+                if ($(window).width() <= mobileWidth) {
                     mobileCallback();
                 } else if ($(window).width() > mobileWidth) {
                     desktopCallback();
@@ -295,16 +295,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     //Reviews video
     if($('.our-cases-slider-play').length>0) {
-        let count = 0;
         $('.our-cases-slider-play').click(function () {
-            let currentVideo = $(this).attr('data-video'), currentImg = $(this).attr('data-img'),currentText = $(this).next('.our-cases-slider-content').html();
+            let currentVideo = $(this).attr('data-video'),
+                currentImg = $(this).attr('data-img'),
+                currentText = $(this).next('.our-cases-slider-content').html(),
+                currentGallery = $(this).parent().siblings('.our-cases-list-gallery').find('.our-cases-list-gallery-imgs').html();
             $('.popup-reviews-content').html(currentText);
+            $('.popup-reviews-video-gallery').html(currentGallery);
             $('.popup-reviews-video').attr('data-youtube', currentVideo).attr('data-youtube-img', currentImg).addClass('youtube');
             youtubeChange();
         });
     }
     togglePopup('.our-cases-slider-play','.popup-reviews');
     $('.popup-reviews .popup-close').click(function () {
+        $('.popup-reviews-video-gallery').html('');
         $('.popup-reviews-content').html('');
         $('.popup-reviews-video').attr('data-youtube', '').attr('data-youtube-img', '').removeClass('youtube').find('.youtube-container').remove();
     });
