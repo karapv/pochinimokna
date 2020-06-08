@@ -2,10 +2,168 @@
 /*==========  Desktop First  ==========*/
 @media screen and (min-width: 1190px)
   /**/
-@media screen and (max-width: 1320px)
-  /**/
+@media screen and (max-width: 1340px)
+  //Window size
+  .window-size
+    grid-template-columns: repeat(4,1fr)
 @media screen and (max-width: 1280px)
-  /**/
+  //Header
+  .catalog-toggle
+    order: -1
+  .header-button-call,.catalog-toggle
+    width: 40px
+  .toggle-title
+    display: none
+  .toggle-decs
+    padding: 0 5px
+  .header-top-container
+    grid-template-columns: 40px 1fr 40px
+    grid-gap: 5px
+  .header-logo
+    justify-content: center
+  .header-nav
+    display: none
+    position: absolute
+    top: 80px
+    width: 100%
+    z-index: 2
+  .header-menu
+    background: #F3FAFA
+    padding: 14px
+    justify-content: flex-start
+  .header-menu-item
+    flex: 1 0 250px
+    margin: .7%
+    &::before
+      content: ''
+      width: 10px
+      height: 2px
+      background: rgba(39,122,122,.3)
+      display: inline-block
+      vertical-align: middle
+      margin-right: 9px
+    a
+      font-weight: normal
+  .catalog-menu-wrapper
+    position: static
+    width: 100%
+    display: block
+  .catalog-menu
+    width: auto
+    padding: 14px
+  .header-bottom
+    grid-template-columns: 100%
+    padding-bottom: 0
+    display: none
+    &.active
+      display: grid
+  .header-search-container
+    margin: 0 -30px
+    padding: 20px 25px
+    background: #F3FAFA
+  .header-mobile
+    display: block
+    background: $blue-gradient
+    padding: 5px 0
+  .header-mobile-container
+    grid-template-columns: 4fr 1fr
+    grid-template-rows: 1fr
+    align-items: center
+    grid-gap: 10px
+    >*
+      align-self: center
+  .header-mobile-tel
+    color: $white
+    font-size: 24px
+    line-height: 28px
+    text-decoration: none
+    font-weight: bold
+  .header-mobile-text
+    color: $white
+  /*Main banner*/
+  .main-banner
+    margin-top: 0
+    background: #F3FAFA
+    background-image: none !important
+  .main-banner-container
+    padding-top: 20px
+    padding-bottom: 20px
+    grid-template-columns: 100%
+  .main-banner-img
+    display: none
+  .banner-play-container
+    display: none
+  .main-banner-content
+    margin: 20px 0
+    text-align: center
+    max-width: 100%
+  .title
+    text-align: center
+  .advantages-list
+    grid-template-columns: 100%
+  //Lead form
+  .lead-form-banner
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+    margin-top: 0
+  .lead-form-banner-footer
+    grid-template-columns: 100%
+    .lead-form-submit
+      width: 100%
+  .lead-form-banner-header
+    grid-template-columns: 1fr
+  //Master Lead
+  .master-lead-img
+    display: none
+  .master-lead-container
+    grid-template-columns: 100%
+    grid-gap: 20px
+  .master-lead-item
+    justify-content: start
+  .master-lead-form,.master-lead-list
+    padding: 30px
+  //Our cases
+  .our-cases-list-item,.our-cases-list-gallery
+    grid-template-columns: 100%
+    grid-gap: 10px
+  .our-cases-list-gallery-imgs
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: repeat(3,1fr)
+    grid-gap: 10px
+  .our-cases-list-gallery-img
+    height: 100%
+  //How we work
+  .how-we-work-list
+    grid-template-columns: repeat(3,1fr)
+  //Video message
+  .video-message-container
+    grid-template-columns: 100%
+    grid-gap: 20px
+  .video-message-item:first-child
+    height: 700px
+  //Why important
+  .why-important-list
+    grid-template-columns: repeat(3,1fr)
+  //Footer
+  .footer-menu
+    grid-template-columns: repeat(3,1fr)
+  .footer-bottom
+    grid-template-columns: repeat(3,1fr)
+  //Popup review
+  .popup-reviews
+    .popup-header
+      display: grid
+      grid-template-columns: 1fr 20px
+      grid-template-rows: 1fr
+      align-items: start
+      >*
+        align-self: start
+    .popup-close
+      text-align: right
+  .popup-review-main,.popup-reviews-content-container,.popup-reviews-form-top
+    grid-template-columns: 100%
+  .popup-write-form-submit
+    width: 100%
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1190px)
   /**/
@@ -13,15 +171,173 @@
   /**/
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 995px)
-  /**/
+  //Services price
+  .services-price-list
+    grid-template-columns: 100%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
-  /**/
+  h1,.h1-title,.title
+    font-size: 24px
+    line-height: 28px
+  h2,.h2-title,.subtitle
+    font-size: 18px
+    line-height: 28px
+  h3,.h3-title
+    font-size: 16px
+    line-height: 19px
+  .h4-title, h4
+    font-size: 15px
+    line-height: 19px
+  .h5-title, h5
+    font-size: 14px
+    line-height: 15px
+  .subtitle
+    text-align: center
+  .subtitle::after
+    display: block
+    margin: 6px auto
+  //Why we
+  .advantages-banner
+    grid-template-columns: 100%
+    padding-right: 0
+    padding-left: 5px
+  .advantages-banner-item:first-child
+    display: none
+  .advantages-banner-sale
+    padding: 20px
+  //Window size
+  .window-size
+    grid-template-columns: repeat(auto-fit,minmax(150px,300px))
+  .window-repair-container,.window-repair-item
+    grid-template-columns: 100%
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
-  /**/
+  .container
+    padding: 0 20px
+  //All services
+  section[class],#footer
+    padding-top: 30px
+    padding-bottom: 30px
+  .all-services
+    margin-top: 0
+  .all-services-list
+    overflow-y: scroll
+    grid-auto-flow: column
+    grid-template-columns: max-content
+    grid-template-rows: 1fr
+    padding: 10px 5px
+  .all-services-list-item
+    width: 205px
+  //Master Lead
+  .master-lead-list,.lead-form-master-container
+    grid-template-columns: 100%
+  .master-lead-submit
+    grid-column-end: 1
+    grid-column-start: 1
+    width: 100%
+  .master-lead-item
+    grid-template-columns: 40px 1fr
+  //Window type
+  .window-type-list
+    grid-template-columns: auto
+  // Why we
+  .why-we-advantages
+    .advantages-list-item
+      text-align: center
+    .advantages-img
+      img
+        margin: 20px auto
+  // How work
+  .how-we-work-list
+    display: block
+    text-align: center
+  .how-we-work-title-container
+    justify-content: center
+    grid-template-columns: auto auto
+  //Project slider
+  .projects-slider .slick-track
+    display: block
+  .project-slider-img
+    display: block
+    height: 190px
+    img
+      width: 100%
+      object-fit: cover
+      height: 100%
+  .projects-slider-wrapper
+    background-image: none !important
+    margin: 0 20px
+    padding-left: 0
+    padding-right: 0
+    position: relative
+  .projects-slider-content
+    max-width: 100%
+    width: 100%
+    background-image: url("../img/_src/main-page/projects-slider/bg-text-mobile.png") !important
+    background-size: 100% 100%
+    padding: 40px 0
+    margin-bottom: -30px
+    position: relative
+    z-index: 1
+  .projects-slider-content-container,.projects-slider-info
+    margin: 0 30px
+  //Video message
+  .video-message-advantages
+    grid-template-columns: repeat(2,1fr)
+    grid-template-rows: repeat(2,1fr)
+  .video-message-advantages-number
+    font-size: 24px
+  //Why important
+  .why-important-list
+    display: block
+  .why-important-list-item-container
+    max-width: 280px
+    margin: 20px auto
+    min-height: 280px
+  //Footer
+  .footer-menu,.footer-bottom
+    grid-template-columns: auto
+  .footer-bottom
+    justify-content: center
+  .footer-logo
+    order: 1
+  //Video message
+  .video-message-item:first-child
+    height: 280px
+  //Header
+  .header-bottom
+    padding-top: 20px
+    padding-bottom: 20px
+  .header-search-container
+    margin: 0 -20px
+  //Popups
+  .popup-write-form-top
+    grid-template-columns: 100%
+    grid-template-rows: auto
+    margin-bottom: 30px
+  .popup-write-textarea
+    grid-column-start: 1
+    grid-column-end: 1
+    grid-row-start: 4
+    grid-row-end: 4
+    order: 1
+  .popup-write-bottom
+    .lead-form-check
+      order: -1
+      margin-bottom: 30px
+  //Price banner
+  .advantages-banner-sale-title
+    font-size: 18px
+    line-height: 21px
+  .advantages-banner-sale-number
+    font-size: 48px
+    line-height: 20px
 @media  only screen and (max-width: 680px)
-  /**/
+  //Popups
+  .popup-review-main
+    grid-template-rows: 150px
+  .popup-call-form
+    grid-template-columns: 100%
 /* Extra Small Devices, Phones */
 @media (max-width: 483px)
   /**/

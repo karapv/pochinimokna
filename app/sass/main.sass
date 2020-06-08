@@ -15,9 +15,12 @@ input, textarea
 ::-webkit-scrollbar
   width: 5px
 ::-webkit-scrollbar-track
-  background: $white
+  background: transparent
 ::-webkit-scrollbar-thumb
-  background: #00542C
+  background: $blue
+  border-radius: 5px
+::-webkit-scrollbar:horizontal
+  height: 5px
 ::-webkit-scrollbar-thumb:hover
   background: #555
 
@@ -245,7 +248,7 @@ img
   color: $blue
   border-bottom: 1px dotted $blue
   cursor: pointer
-.site-contact-graphic
+.site-contacts-graphic
   color: $black
   border-bottom: 0
 //Youtube video
@@ -312,6 +315,7 @@ img
   margin-left: 5px
 .lead-form-check
   border: none
+  padding: 0
 .lead-form-checkbox:checked + .lead-form-checkbox-label::before
     background: url('../img/icons/form-done.svg') no-repeat center/contain $white
 .lead-form-checkbox-label
@@ -368,6 +372,7 @@ img
   align-items: center
   width: 100%
   height: 100%
+  overflow-x: auto
 .popup-container
   width: 70%
   padding: 20px
@@ -474,6 +479,7 @@ img
   grid-template-rows: 1fr
   grid-gap: 30px
   align-items: center
+  position: relative
   >*
     align-self: center
 .logo
@@ -504,7 +510,8 @@ img
 .catalog-menu-wrapper
   display: none
   position: absolute
-  top: 45px
+  top: 81px
+  left: 18%
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2)
   border-radius: 3px
   z-index: 1
@@ -566,6 +573,7 @@ img
   background: #FFFFFF
   border: 1px solid #ECECEC
   border-radius: 3px
+  flex-wrap: nowrap
 .header-search-input
   display: block
   width: 80%
@@ -575,6 +583,8 @@ img
   @include reset-button
   background-color: transparent
   color: $blue
+.header-mobile
+  display: none
 /* Main banner */
 .main-banner
   margin-top: -70px
@@ -637,7 +647,7 @@ img
   font-size: 26px
   margin: 0
 .lead-form-banner-header
-  grid-template-columns: 1fr 3.5fr
+  grid-template-columns: 1fr 3fr
   grid-template-rows: 1fr
   grid-gap: 15px
   align-items: center
@@ -656,15 +666,15 @@ img
   padding: 97px 0 55px 0
   margin-top: -42px
 .all-services-list
-  flex-wrap: wrap
-  margin: 55px 0.7% 0 0.7%
+  margin: 55px 0 0 0
   justify-content: flex-start
+  grid-template-columns: repeat(auto-fit,minmax(200px,205px))
+  grid-template-rows: repeat(2,1fr)
+  grid-gap: 20px
 .all-services-list-item
-  flex: 1 0 205px
   border-radius: 3px
   background-color: $white
   position: relative
-  margin: 0.7%
   &>a
     display: block
     text-decoration: none
@@ -746,13 +756,14 @@ img
   display: flex
   align-items: center
   padding-left: 10px
-.projects-slider
-  margin-top: 55px
 //Projects slider
 .projects-slider
+  margin-top: 55px
   position: relative
   .slick-track
     display: flex
+.project-slider-img
+  display: none
 .slider-btn
   display: block
   background: url('../img/icons/right.svg') no-repeat center/cover
@@ -898,13 +909,14 @@ img
   position: absolute
   width: 100%
   top: 15%
+  justify-content: center
 .window-size-label
   flex-direction: column
   color: $white
   &::before
     order: 2
 .window-size-checkbox-item
-  margin: 0 auto
+  padding: 0 10px
 .window-sizes
   margin-top: 25px
 .window-sizes-item
@@ -985,17 +997,18 @@ img
     height: 100%
     object-fit: cover
 .our-cases-slider-title
-  margin: 0
+  margin: 0 0 15px 0
 .our-cases-slider-play
   color: $blue
   cursor: pointer
 /*Our partners*/
 .our-partners-list
-  grid-template-columns: repeat(6,1fr)
+  grid-template-columns: repeat(auto-fit,minmax(116px,192px))
   grid-template-rows: 1fr
   grid-gap: 20px
   align-items: center
-  padding: 20px 0
+  padding-top: 20px
+  padding-bottom: 20px
   >*
     align-self: center
 /*How work*/
@@ -1042,7 +1055,7 @@ img
   grid-template-columns: 1fr 3fr
   grid-gap: 44px
   grid-template-rows: 1fr
-.services-price-menu-item
+.services-menu-header
   padding: 20px 30px
   margin-bottom: 10px
   font-size: 18px
@@ -1053,9 +1066,9 @@ img
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)
     border-radius: 3px
   &.active
-    background: url(../img/_src/services-price/active.png) no-repeat top/100%
+    background: url(../img/_src/services-price/active.png) no-repeat top/100% 100%
     color: $white
-.services-price-container
+.services-price-container,.services-price-mobile-container
   display: none
   &.active
     display: block
@@ -1116,6 +1129,8 @@ img
   box-shadow: 0 20px 40px rgba(200, 200, 200, 0.3)
   border-radius: 3px
   margin-bottom: 30px
+  img
+    width: 100%
 /*Why important */
 .why-important
   padding: 38px 0 48px 0
@@ -1124,7 +1139,7 @@ img
   grid-template-columns: repeat(4,1fr)
   grid-template-rows: repeat(2,1fr)
   grid-gap: 15px
-.why-important-list-item
+.why-important-list-item-container
   background: #FFFFFF
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
   border-radius: 3px
@@ -1144,7 +1159,7 @@ img
   box-shadow: none
   align-content: space-between
   padding: 30px
-.why-important-title
+.why-important-title-last
   font-weight: bold
   font-size: 20px
   line-height: 23px

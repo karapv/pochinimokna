@@ -29,6 +29,16 @@
 						<div class="toggle-dec"></div>
 					</div>
 					<div class="toggle-title">Наши услуги</div>
+				</div>
+				<nav class="header-nav">
+					<ul class="flex-container header-menu">
+						<li class="header-menu-item"><a href="#">О компании</a></li>
+						<li class="header-menu-item"><a href="#">Цены</a></li>
+						<li class="header-menu-item"><a href="#">Статьи</a></li>
+						<li class="header-menu-item"><a href="#">FAQ</a></li>
+						<li class="header-menu-item"><a href="#">Портфолио и отзывы</a></li>
+						<li class="header-menu-item"><a href="#">Контакты</a></li>
+					</ul>
 					<div class="catalog-menu-wrapper">
 						<ul class="flex-container catalog-menu">
 							<li class="catalog-item"><a href="#">Ремонт ПВХ окон</a></li>
@@ -46,18 +56,20 @@
 						</ul>
 						<a href="#" class="catalog-more">Полный список услуг</a>
 					</div>
-				</div>
-				<ul class="flex-container header-menu">
-					<li class="header-menu-item"><a href="#">О компании</a></li>
-					<li class="header-menu-item"><a href="#">Цены</a></li>
-					<li class="header-menu-item"><a href="#">Статьи</a></li>
-					<li class="header-menu-item"><a href="#">FAQ</a></li>
-					<li class="header-menu-item"><a href="#">Портфолио и отзывы</a></li>
-					<li class="header-menu-item"><a href="#">Контакты</a></li>
-				</ul>
-				<button class="btn btn-blue btn-call">Перезвонить вам</button>
+				</nav>
+				<button class="btn btn-blue btn-call header-button-call">Перезвонить вам</button>
 			</div>
 		</div>
+	<div class="header-mobile">
+		<div class="grid-container container header-mobile-container">
+			<div class="header-mobile-item">
+				<a href="" class="header-mobile-tel">8 (800) 920 29 69</a>
+			</div>
+			<div class="header-mobile-item">
+                <span class="header-mobile-text">Бесплатный звонок</span>
+			</div>
+		</div>
+	</div>
 		<div class="container grid-container header-bottom">
 			<div class="grid-container header-bottom-item site-contacts">
 				<div class="site-contacts-icon">7/7</div>
@@ -87,10 +99,12 @@
 					<span class="site-contacts-info-text btn-call">Бесплатный звонок</span>
 				</div>
 			</div>
-			<form class="flex-container header-bottom-item header-search">
+			<div class="header-search-container">
+				<form class="flex-container header-bottom-item header-search">
 					<input type="text" class="header-search-input">
-                    <button type="submit" class="fas fa-search header-search-submit"></button>
-			</form>
+					<button type="submit" class="fas fa-search header-search-submit"></button>
+				</form>
+			</div>
 		</div>
 </header>
 <!-- Main -->
@@ -171,7 +185,7 @@
 	<section class="all-services grey-bg">
 		<div class="container">
 			<h2 class="subtitle">Все услуги</h2>
-			<ul class="flex-container all-services-list">
+			<ul class="grid-container all-services-list">
 				<li class="all-services-list-item"><a href="#">
 					<span class="all-services-sale">-10%</span>
 					<div class="all-services-img"><img data-src="img/_src/all-services/service-1.jpg" class="lazy" alt="services"></div>
@@ -306,6 +320,9 @@
 							<span class="projects-slider-price">от 1500 ₽</span>
 						</div>
 					</div>
+					<div class="project-slider-img">
+						<img data-lazy="img/_src/main-page/projects-slider/item-1.jpg"  alt="title">
+					</div>
 				</div>
 			</li>
 			<li class="projects-slider-item">
@@ -320,6 +337,9 @@
 							<span class="projects-slider-price">от 1500 ₽</span>
 						</div>
 					</div>
+					<div class="project-slider-img">
+						<img data-lazy="img/_src/main-page/projects-slider/item-2.jpg"  alt="title">
+					</div>
 				</div>
 			</li>
 			<li class="projects-slider-item">
@@ -333,6 +353,9 @@
 							<a href="#" class="project-slider-url">Подробнее</a>
 							<span class="projects-slider-price">от 1500 ₽</span>
 						</div>
+					</div>
+					<div class="project-slider-img">
+						<img data-lazy="img/_src/main-page/projects-slider/item-2.jpg"  alt="title">
 					</div>
 				</div>
 			</li>
@@ -660,56 +683,6 @@
 						</div>
 					</div>
 				</li>
-				<li class="grid-container our-cases-list-item">
-					<div class="grid-container our-cases-list-gallery">
-						<div class="our-cases-list-gallery-main">
-							<img src="img/_src/our-cases/item-2/main-bg.jpg" alt="case" class="our-cases-list-img lazy">
-						</div>
-						<div class="our-cases-list-gallery-imgs">
-							<div class="our-cases-list-gallery-img"><img src="img/_src/our-cases/item-2/item-1.jpg" alt="case" class="our-cases-list-img lazy"></div>
-							<div class="our-cases-list-gallery-img"><img src="img/_src/our-cases/item-2/item-2.jpg" alt="case" class="our-cases-list-img lazy"></div>
-							<div class="our-cases-list-gallery-img"><img src="img/_src/our-cases/item-2/item-3.jpg" alt="case" class="our-cases-list-img lazy"></div>
-						</div>
-					</div>
-					<div class="our-cases-list-content">
-						<h3 class="our-cases-slider-title">Ремонт параллельно-сдвижных дверей</h3>
-						<div class="our-cases-slider-play" data-video="https://www.youtube.com/watch?v=-uj9b9JCIJM" data-img="img/_src/our-cases/item-1/main-img.jpg">
-							<i class="fas fa-play-circle our-cases-video-play"></i>
-							<span class="our-cases-video-play-text">Видео-отзыв от клиента</span>
-						</div>
-						<div class="our-cases-slider-content">
-							<p>Ремонт параллельно-сдвижных дверей, огромная дверь в доме в деревне.</p>
-							<p>Проблемы: При закрывании ручка не опускалась вертикально вниз, фурнитуры работала не корректно с щелчками и хрустом. Дверь тяжело входила в проем.</p>
-							<p>Произведенные работы: разобрали дверь “по винтикам”, закрутили саморезы, которые держат армирование и добавили еще, так как расстояние между саморезами  было более 40 см. Усилили крепление направляющих шин. Выставили геометрию по проему.</p>
-							<p>Сложности: Фурнитура такого типа требует качественной сборки и монтажа конструкции. В связи с тем, что эти условия не были соблюдены, нам пришлось снимать дверь, полностью ее перебирать и устанавливать на место. Кривой монтаж также усложнил настройку фурнитуры. Размеры и вес двери большие.</p>
-						</div>
-					</div>
-				</li>
-				<li class="grid-container our-cases-list-item">
-					<div class="grid-container our-cases-list-gallery">
-						<div class="our-cases-list-gallery-main">
-							<img src="img/_src/our-cases/item-3/main-bg.jpg" alt="case" class="our-cases-list-img lazy">
-						</div>
-						<div class="our-cases-list-gallery-imgs">
-								<div class="our-cases-list-gallery-img"><img src="img/_src/our-cases/item-3/item-1.jpg" alt="case" class="our-cases-list-img lazy"></div>
-								<div class="our-cases-list-gallery-img"><img src="img/_src/our-cases/item-3/item-2.jpg" alt="case" class="our-cases-list-img lazy"></div>
-								<div class="our-cases-list-gallery-img"><img src="img/_src/our-cases/item-3/item-3.jpg" alt="case" class="our-cases-list-img lazy"></div>
-						</div>
-					</div>
-					<div class="our-cases-list-content">
-						<h3 class="our-cases-slider-title">Ремонт параллельно-сдвижных дверей</h3>
-						<div class="our-cases-slider-play" data-video="https://www.youtube.com/watch?v=-uj9b9JCIJM" data-img="img/_src/our-cases/item-1/main-img.jpg">
-							<i class="fas fa-play-circle our-cases-video-play"></i>
-							<span class="our-cases-video-play-text">Видео-отзыв от клиента</span>
-						</div>
-						<div class="our-cases-slider-content">
-							<p>Ремонт параллельно-сдвижных дверей, огромная дверь в доме в деревне.</p>
-							<p>Проблемы: При закрывании ручка не опускалась вертикально вниз, фурнитуры работала не корректно с щелчками и хрустом. Дверь тяжело входила в проем.</p>
-							<p>Произведенные работы: разобрали дверь “по винтикам”, закрутили саморезы, которые держат армирование и добавили еще, так как расстояние между саморезами  было более 40 см. Усилили крепление направляющих шин. Выставили геометрию по проему.</p>
-							<p>Сложности: Фурнитура такого типа требует качественной сборки и монтажа конструкции. В связи с тем, что эти условия не были соблюдены, нам пришлось снимать дверь, полностью ее перебирать и устанавливать на место. Кривой монтаж также усложнил настройку фурнитуры. Размеры и вес двери большие.</p>
-						</div>
-					</div>
-				</li>
 			</ul>
 		</div>
 	</section>
@@ -786,16 +759,370 @@
 			<h2 class="subtitle services-price-title">Стоимость услуг</h2>
 			<div class="grid-container services-price-list">
 				<div class="services-price-list-item">
-					<ul class="services-price-menu">
-						<li class="services-price-menu-item">ПВХ окона</li>
-						<li class="services-price-menu-item">Деревянные окна</li>
-						<li class="services-price-menu-item">Алюминиевые окна</li>
-						<li class="services-price-menu-item">Входные ПВХ двери</li>
-						<li class="services-price-menu-item">Балконные двери</li>
-						<li class="services-price-menu-item">Замена стеклопакетов</li>
-						<li class="services-price-menu-item">Детские замки на окнах</li>
-						<li class="services-price-menu-item">Выезд мастера</li>
-					</ul>
+					<div class="services-price-menu">
+						<div class="services-price-menu-item">
+							<header class="services-menu-header">ПВХ окона</header>
+							<div class="services-price-mobile-container">
+								<div class="services-list-price-table">
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя обычного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя вклеенного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена фурнитуры (комплект обвязки + работа по установке)</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">550₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена петель</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Установка дополнительного внешнего прижима</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Выравнивание искривления створки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">250₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-price-menu-item">
+							<header class="services-menu-header">Деревянные окна</header>
+							<div class="services-price-mobile-container">
+								<div class="services-list-price-table">
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя обычного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя вклеенного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена фурнитуры (комплект обвязки + работа по установке)</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">550₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена петель</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Установка дополнительного внешнего прижима</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Выравнивание искривления створки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">250₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-price-menu-item">
+							<header class="services-menu-header">Алюминиевые окна</header>
+							<div class="services-price-mobile-container">
+								<div class="services-list-price-table">
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя обычного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя вклеенного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена фурнитуры (комплект обвязки + работа по установке)</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">550₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена петель</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Установка дополнительного внешнего прижима</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Выравнивание искривления створки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">250₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-price-menu-item">
+							<header class="services-menu-header">Входные ПВХ двери</header>
+							<div class="services-price-mobile-container">
+								<div class="services-list-price-table">
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя обычного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя вклеенного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена фурнитуры (комплект обвязки + работа по установке)</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">550₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена петель</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Установка дополнительного внешнего прижима</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Выравнивание искривления створки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">250₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-price-menu-item">
+							<header class="services-menu-header">Балконные двери</header>
+							<div class="services-price-mobile-container">
+								<div class="services-list-price-table">
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя обычного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя вклеенного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена фурнитуры (комплект обвязки + работа по установке)</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">550₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена петель</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Установка дополнительного внешнего прижима</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Выравнивание искривления створки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">250₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-price-menu-item">
+							<header class="services-menu-header">Замена стеклопакетов</header>
+							<div class="services-price-mobile-container">
+								<div class="services-list-price-table">
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя обычного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя вклеенного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена фурнитуры (комплект обвязки + работа по установке)</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">550₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена петель</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Установка дополнительного внешнего прижима</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Выравнивание искривления створки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">250₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-price-menu-item">
+							<header class="services-menu-header">Детские замки на окнах</header>
+							<div class="services-price-mobile-container">
+								<div class="h3-title service-price-list-title">Ремонт пвх окон</div>
+								<div class="services-list-price-table">
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя обычного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя вклеенного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена фурнитуры (комплект обвязки + работа по установке)</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">550₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена петель</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Установка дополнительного внешнего прижима</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Выравнивание искривления створки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">250₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-price-menu-item">
+							<header class="services-menu-header">Выезд мастера</header>
+							<div class="services-price-mobile-container">
+								<div class="h3-title service-price-list-title">Ремонт пвх окон</div>
+								<div class="services-list-price-table">
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя обычного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена уплотнителя вклеенного на Q-Lon м/п
+										</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена фурнитуры (комплект обвязки + работа по установке)</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">550₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Замена петель</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Установка дополнительного внешнего прижима</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+									</div>
+									<div class="grid-container services-list-price-table-tr">
+										<div class="services-list-price-table-name">Выравнивание искривления створки</div>
+										<div class="services-list-price-table-prices">от <span class="red-price">250₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="services-price-list-item">
 					<div class="services-price-container">
@@ -1043,36 +1370,52 @@
 			<h2 class="subtitle why-important-title">Почему важен ремонт окон</h2>
 			<ul class="grid-container why-important-list">
 				<li class="why-important-list-item">
-					<div class="why-important-number">1</div>
-					<div class="why-important-content">Если окна уже не первой свежести, стоит рассмотреть ремонт или даже замену таковых. Более экономным вариантом может быть просто ремонт - то есть удаление существующего остекления и установки потребностям</div>
+					<div class="why-important-list-item-container">
+						<div class="why-important-number">1</div>
+						<div class="why-important-content">Если окна уже не первой свежести, стоит рассмотреть ремонт или даже замену таковых. Более экономным вариантом может быть просто ремонт - то есть удаление существующего остекления и установки потребностям</div>
+					</div>
 				</li>
 				<li class="why-important-list-item">
+					<div class="why-important-list-item-container">
 					<div class="why-important-number">2</div>
 					<div class="why-important-content">Если окна уже не первой свежести, стоит рассмотреть ремонт или даже замену таковых. Более экономным вариантом может быть просто ремонт - то есть удаление существующего остекления и установки потребностям</div>
+					</div>
 				</li>
 				<li class="why-important-list-item">
+					<div class="why-important-list-item-container">
 					<div class="why-important-number">3</div>
 					<div class="why-important-content">Если окна уже не первой свежести, стоит рассмотреть ремонт или даже замену таковых. Более экономным вариантом может быть просто ремонт - то есть удаление существующего остекления и установки потребностям</div>
+					</div>
 				</li>
 				<li class="why-important-list-item">
+					<div class="why-important-list-item-container">
 					<div class="why-important-number">4</div>
 					<div class="why-important-content">Если окна уже не первой свежести, стоит рассмотреть ремонт или даже замену таковых. Более экономным вариантом может быть просто ремонт - то есть удаление существующего остекления и установки потребностям</div>
+					</div>
 				</li>
 				<li class="why-important-list-item">
+					<div class="why-important-list-item-container">
 					<div class="why-important-number">5</div>
 					<div class="why-important-content">Если окна уже не первой свежести, стоит рассмотреть ремонт или даже замену таковых. Более экономным вариантом может быть просто ремонт - то есть удаление существующего остекления и установки потребностям</div>
+					</div>
 				</li>
 				<li class="why-important-list-item">
+					<div class="why-important-list-item-container">
 					<div class="why-important-number">6</div>
 					<div class="why-important-content">Если окна уже не первой свежести, стоит рассмотреть ремонт или даже замену таковых. Более экономным вариантом может быть просто ремонт - то есть удаление существующего остекления и установки потребностям</div>
+					</div>
 				</li>
 				<li class="why-important-list-item">
+					<div class="why-important-list-item-container">
 					<div class="why-important-number">7</div>
 					<div class="why-important-content">Если окна уже не первой свежести, стоит рассмотреть ремонт или даже замену таковых. Более экономным вариантом может быть просто ремонт - то есть удаление существующего остекления и установки потребностям</div>
+					</div>
 				</li>
-				<li class="flex-container why-important-list-item why-important-list-item-last lazy" data-bg="url(img/_src/why-important/bg.png)">
-					<span class="why-important-title">Мы расчитаем стоимость ремонта или обслуживания ваших окон</span>
+				<li class="why-important-list-item" >
+					<div class="flex-container why-important-list-item-container why-important-list-item-last lazy" data-bg="url(img/_src/why-important/bg.png)">
+					<span class="why-important-title-last">Мы расчитаем стоимость ремонта или обслуживания ваших окон</span>
 					<span class="btn why-important-btn btn-master">Расчитать стоимость ремонта окон</span>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -1124,7 +1467,7 @@
 		</div>
 	</section>
 	<!-- Map -->
-	<section class="map-contacts">
+	<!--<section class="map-contacts">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577336.7643495313!2d36.82512366383748!3d55.58074805134845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1591250347335!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		<div class="maps-contacts-container">
 			<div class="grid-container site-contacts maps-contacts-item">
@@ -1156,7 +1499,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
 </main>
 <!-- Footer -->
 <footer id="footer" class="grey-bg">

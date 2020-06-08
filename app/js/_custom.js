@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             })
         }
-    }
+    };
     //Youtube video
     const youtubeChange = ()=>{
         if($('.youtube').length>0){
@@ -128,25 +128,55 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     youtubeChange();
     //Mobile slider
-    const mobileSlider = (elem) =>{
-        if ($(window).width() <= 880) {
-            $(elem).slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
-            })
-        }
-        $(window).resize(function () {
-            if ($(window).width() <= 880) {
+    const mobileSlider = (elem,mobileWidth) =>{
+        let resize = false;
+        if(resize === false) {
+            if ($(window).width() <= mobileWidth) {
                 $(elem).slick({
                     infinite: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: false
+                    prevArrow: '<span class="slider-btn slider-btn-left"></span>',
+                    nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
                 })
-            } else if ($(window).width() > 880 && $(elem).hasClass('slick-initialized')) {
+            } else if ($(window).width() > mobileWidth && $(elem).hasClass('slick-initialized')) {
                 $(elem).filter('.slick-initialized').slick('unslick');
+            }
+        }
+        $(window).resize(function() {
+            resize = true;
+            if(resize === true) {
+                if ($(window).width() <= mobileWidth) {
+                    $(elem).slick({
+                        infinite: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        prevArrow: '<span class="slider-btn slider-btn-left"></span>',
+                        nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
+                    })
+                } else if ($(window).width() > mobileWidth && $(elem).hasClass('slick-initialized')) {
+                    $(elem).filter('.slick-initialized').slick('unslick');
+                }
+            }
+        });
+    };
+    const AdaptiveBlocks = (mobileWidth,desktopCallback,mobileCallback)=>{
+        let resize = false;
+        if(resize === false) {
+            if ($(window).width() <= mobileWidth) {
+                mobileCallback();
+            } else if ($(window).width() > mobileWidth) {
+                desktopCallback();
+            }
+        }
+        $(window).resize(function() {
+            resize = true;
+            if(resize === true) {
+                if ($(window).width() > mobileWidth) {
+                    mobileCallback();
+                } else if ($(window).width() > mobileWidth) {
+                    desktopCallback();
+                }
             }
         });
     };
@@ -196,11 +226,20 @@ document.addEventListener("DOMContentLoaded", function() {
             youtubeChange();
         };
     //Catalog
-    $('.catalog-toggle').hover(function () {
-        $('.catalog-menu-wrapper').fadeIn('fast');
-    },function () {
-        $('.catalog-menu-wrapper').fadeOut('fast');
-    });
+    const catalogHover = () =>{
+        $('.catalog-toggle').mouseenter(function () {
+            $('.catalog-menu-wrapper').fadeIn('fast');
+        });
+        $('.catalog-menu-wrapper').mouseleave(function () {
+            $('.catalog-menu-wrapper').fadeOut('fast');
+        });
+    };
+    const catalogClick = () =>{
+        $('.catalog-toggle').click(function () {
+            $('.header-nav').fadeToggle('fast');
+        });
+    };
+    AdaptiveBlocks(1280,catalogHover,catalogClick);
     //Banner popup
     togglePopup('.play-banner-popup','.popup-video');
     //Projects slider
@@ -226,18 +265,10 @@ document.addEventListener("DOMContentLoaded", function() {
     togglePopup('.btn-master','.popup-master');
     togglePopup('.window-calc-submit','.popup-master');
     togglePopup('.btn-write','.popup-write');
-    togglePopup('.btn-call','.popup-call');
+    togglePopup('.btn-call:not(.header-button-call)','.popup-call');
     //Calculator
     calculatorLabelChecker('.window-type-item','.lead-form-checkbox','.lead-form-checkbox-label','window-type');
     calculatorLabelChecker('.window-size-checkbox-item','.lead-form-checkbox','.lead-form-checkbox-label','window-size');
-    if($('.window-size-checkbox-container').length>0){
-        $('.window-size-checkbox-container').each(function () {
-            if($(this).find('.window-size-checkbox-item').length == 2){
-                $(this).find('.window-size-checkbox-item:last-child').css({'margin-left':'0'});
-                $(this).find('.window-size-checkbox-item:first-child').css({'margin-right':'15px'});
-            }
-        })
-    }
     calculatorCheckox('.window-type-item .lead-form-checkbox','data-type');
     calculatorCheckox('.window-size-checkbox','data-type-window');
     calculatorCheckox('.window-repair-radio','data-delivery');
@@ -286,22 +317,44 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     //Service prices
-    if($('.services-price-container').length>0){
-        let containerItem = document.querySelectorAll('.services-price-container'),menuItem = document.querySelectorAll('.services-price-menu-item');
-        for(let i = 0;i<containerItem.length;i++){
-            menuItem[i].setAttribute('data-item-price',`price-container-${i}`);
-            containerItem[i].setAttribute('id',`price-container-${i}`);
+    const ServicesPrice = (item,data,oldItem) =>{
+        if($(item).length>0){
+            let containerItem = document.querySelectorAll(item),menuItem = document.querySelectorAll('.services-menu-header');
+            for(let i = 0;i<containerItem.length;i++){
+                menuItem[i].setAttribute('data-item-price',`${data}-${i}`);
+                containerItem[i].setAttribute('id',`${data}-${i}`);
+            }
         }
-    }
-    if($('.services-price-menu-item').length>0){
-        $('.services-price-menu-item:first-child').addClass('active');
-        $('.services-price-container:first-child').addClass('active');
-        $('.services-price-menu-item').click(function () {
-            let currentItem = $(this).attr('data-item-price');
-            $(this).addClass('active').siblings().removeClass('active');
-            $(`#${currentItem}`).addClass('active').siblings().removeClass('active');
-        })
-    }
+        if($('.services-menu-header').length>0){
+            $('.services-price-menu-item:first-child .services-menu-header').addClass('active');
+            if(item === '.services-price-mobile-container') {
+                $(`.services-price-menu-item:first-child ${item}`).addClass('active');
+                $(`${oldItem}`).removeClass('active');
+            }else {
+                $(`${item}:first-child`).addClass('active');
+                $(`${oldItem}`).removeClass('active');
+            }
+            $('.services-menu-header').click(function () {
+                let currentItem = $(this).attr('data-item-price');
+                $(this).addClass('active').parent().siblings().find('.services-menu-header').removeClass('active');
+                if(item === '.services-price-mobile-container') {
+                    $(`#${currentItem}`).addClass('active').parent().siblings().find(`${item}`).removeClass('active');
+                }else{
+                    $(`#${currentItem}`).addClass('active').siblings().removeClass('active');
+                }
+            });
+
+        }
+    };
+    const ServicesPriceDesktop = () =>{
+        ServicesPrice('.services-price-container','price-container','.services-price-mobile-container');
+    };
+    const ServicesPriceMobile = () =>{
+        ServicesPrice('.services-price-mobile-container','price-mobile-container','.services-price-container');
+    };
+
+    AdaptiveBlocks(990,ServicesPriceDesktop,ServicesPriceMobile);
+
     //Employees slider
     if($('.employees-slider-item').length>0){
         $('.employees-slider').slick({
@@ -312,10 +365,17 @@ document.addEventListener("DOMContentLoaded", function() {
             nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
             responsive: [
                 {
-                    breakpoint: 990,
+                    breakpoint: 1250,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 790,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
                     }
                 }
             ]
@@ -327,5 +387,23 @@ document.addEventListener("DOMContentLoaded", function() {
             $(this).toggleClass('active').siblings().removeClass('active');
         })
     }
+    //Mobile header
+    const HeaderBtnMobile = () =>{
+        $('.header-button-call').html(`<i class="fas fa-phone-alt"></i>`);
+        $('.header-button-call').click(function () {
+            $('.header-bottom').toggleClass('active');
+        })
+    };
+    const HeaderBtnDesktop = () =>{
+        $('.header-button-call').html(`Перезвонить нам`);
+        togglePopup('.header-button-call','.popup-call');
+    };
+    AdaptiveBlocks(1280,HeaderBtnDesktop,HeaderBtnMobile);
+    //Why we slider
+    mobileSlider('.why-we-advantages',794);
+    //How we work
+    mobileSlider('.how-we-work-list',794);
+    //Why important
+    mobileSlider('.why-important-list',794);
 });
 
