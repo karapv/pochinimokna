@@ -107,6 +107,11 @@ body
       line-height: 105px
   p
     margin-bottom: 14px
+.banner-page
+  padding-top: 100px
+  margin-top: -70px
+  background-position: top right
+  background-repeat: no-repeat
 //Titles
 h1,h2,h3,h4,h5,.h1-title,.h2-b-title,.h3-title,.h4-title,.h5-title,blockquote
   margin: 10px 0
@@ -187,7 +192,7 @@ img
   max-width: 1500px
   margin: 0 auto
 .container
-  max-width: 1365px
+  max-width: 1380px
   padding: 0 30px
   margin: 0 auto
   position: relative
@@ -210,6 +215,7 @@ img
   color: $white
   &:hover
     text-decoration: none
+    border-bottom: 0
 .btn-grey
   background: #EBEBEB
   color: #595959
@@ -592,15 +598,10 @@ img
 .header-mobile
   display: none
 /* Main banner */
-.main-banner
-  margin-top: -70px
-  background-repeat: no-repeat
-  background-position: top right
 .main-banner-container
   grid-template-columns: 2fr 1.5fr
   grid-template-rows: 1fr
   grid-column-gap: 30px
-  padding-top: 170px
   padding-bottom: 100px
   background-repeat: no-repeat
   background-position: top right
@@ -615,7 +616,7 @@ img
   right: -105px
   grid-template-columns: 80px 190px
   grid-template-rows: 1fr
-  grid-gap: 20px
+  grid-gap: 10px
   align-items: center
   z-index: 1
   >*
@@ -1299,4 +1300,77 @@ img
       border-bottom: 0
 .services-list-btn
   margin-top: 20px
+//Service page
+.service-page
+  background: #F3FAFA
+.service-page-container
+  grid-template-columns: 2fr 2fr
+  grid-template-rows: auto
+  grid-gap: 30px
+.service-page-content
+  color: $black
+  margin-bottom: 55px
+.service-page-nav
+  grid-template-columns: repeat(5,1fr)
+  grid-template-rows: auto
+  grid-gap: 20px
+  text-align: center
+  background-color: $white
+  padding: 15px
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+  margin-bottom: 40px
+  a
+    text-decoration: none
+.service-page-nav-item
+  position: relative
+.price-sale
+  position: absolute
+  top: -10px
+  right: -3px
+  padding: 2px
+  font-weight: bold
+  width: 22px
+  height: 12px
+  line-height: 12px
+  font-size: 8px
+  background: #73E0A5
+  border-radius: 3px
+  text-align: center
+  color: #FFFFFF
+.service-page-banner-right
+  grid-template-columns: 1fr 2fr
+  grid-gap: 20px
+  background-repeat: no-repeat
+  background-position: center bottom
+  background-size: contain
+.service-page-play
+  position: static
+  align-items: start
+  margin-top: 130px
+  >*
+    align-self: start
+.banner-form
+  background-color: $white
+  padding: 30px
+  position: absolute
+  bottom: 30px
+.banner-form-title
+  margin-top: 0
+  margin-bottom: 15px
+.banner-form-content
+  margin-bottom: 30px
+.banner-form-item
+  margin-bottom: 30px
+.banner-form-container
+  display: flex
+  align-items: flex-end
+  position: relative
+.banner-form-item-submit
+  width: 100%
+//Services page table
+.service-page-price
+  padding: 55px 0
+.service-page-price-title
+  margin-bottom: 55px
 @import 'media'

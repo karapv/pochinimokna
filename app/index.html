@@ -110,373 +110,326 @@
 <!-- Main -->
 <main id="main">
 	<!-- Services page -->
-	<section class="services-page">
+	<section class="banner-page service-page">
+		<div class="container grid-container service-page-container">
+			<div class="service-page-item">
+				<h1 class="subtitle is-page-title">Ремонт ВПХ окон</h1>
+				<ul class="flex-container breadcrumbs">
+					<li class="breadcrumbs-item"><a href="#">Главная </a><i class="fas fa-chevron-right breadcrumbs-next"></i></li>
+					<li class="breadcrumbs-item"><a href="#">Услуги </a><i class="fas fa-chevron-right breadcrumbs-next"></i></li>
+					<li class="breadcrumbs-item current">Ремонт ВПХ окон</li>
+				</ul>
+				<div class="service-page-content">
+					<p>Современные ПВХ окно – это высоко технологичная конструкция, состоящая из большого числа взаимозаменяемых деталей. Пластиковые окна - ремонтируемая конструкцию, поэтому если рама не повреждена, то остальные элементы, как стеклопакеты, фурнитура, уплотнители, откосы можно легко поменять или отрегулировать.</p>
+					<p>В данном случае замена всего окна необязательна. Но, такие работы нужно доверить только высококвалифицированным специалистам, которые хорошо знакомы со всеми выпускаемыми моделями оконных конструкций.</p>
+					<p>Если у Вас нет опыта, мы не рекомендуем  самостоятельно чинить ПВХ окно. Часто проблема ремонта состоит в том, что требуется все лишь регулировка фурнитуры, но при неправильном вмешательстве, может уже потребоваться замена всех элементов.</p>
+				</div>
+				<ul class="grid-container service-page-nav">
+					<li class="service-page-nav-item scrollTo"><a href="#prices">Стоимость услуг</a><span class="price-sale">-10%</span></li>
+					<li class="service-page-nav-item scrollTo"><a href="#calc">Калькулятор</a></li>
+					<li class="service-page-nav-item scrollTo"><a href="#cases">Наши кейсы</a></li>
+					<li class="service-page-nav-item scrollTo"><a href="#faq">FAQ</a></li>
+					<li class="service-page-nav-item scrollTo"><a href="#other">Другие услуги</a></li>
+				</ul>
+			</div>
+			<div class="service-page-item grid-container service-page-banner-right lazy" data-bg="url(img/icons/master.png)">
+				<div class="grid-container banner-play-container service-page-play">
+					<span class="play-popup play-banner-popup lazy" data-bg="url(img/icons/play.svg)"></span>
+					<span  class="play-popup-title">Видеообращение директора компании</span>
+				</div>
+				<div class="banner-form-container">
+					<div class="banner-form">
+						<div class="h3-title banner-form-title">Вызов мастера</div>
+						<div class="banner-form-content">Оставьте ваши данные и мы свяжемся с вами. Мы не занимаемся рассылкой рекламных сообщений, а так же не передаем контактные данные третьим лицам</div>
+						<div class="lead-form-item banner-form-item">
+							<input type="text" class="lead-form-input" placeholder="Ваше имя">
+						</div>
+						<div class="lead-form-item banner-form-item">
+							<input type="tel" class=" lead-form-input" placeholder="Телефон">
+						</div>
+
+						<input type="submit" class="btn btn-red lead-form-submit banner-form-item-submit" value="Вызвать мастера">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Service page prices -->
+	<section class="service-page-price" id="prices">
 		<div class="container">
-			<h1 class="subtitle is-page-title">Все услуги</h1>
-			<ul class="flex-container breadcrumbs">
-				<li class="breadcrumbs-item"><a href="#">Главная </a><i class="fas fa-chevron-right breadcrumbs-next"></i></li>
-				<li class="breadcrumbs-item current">Все услуги</li>
-			</ul>
-			<div class="grid-container services-page-list">
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-1.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Ремонт фурнитуры WINKHAUS</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
+			<h2 class="subtitle service-page-price-title">Стоимость услуг</h2>
+			<div class="services-page-price-table">
+				<div class="services-list-price-table services-page-table">
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+					</div>
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+					</div>
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+					</div>
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+					</div>
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+					</div>
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+					</div>
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+					</div>
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
+					</div>
+					<div class="grid-container services-list-price-table-tr">
+						<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
+						<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+					</div>
 				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-2.jpg" class="lazy" alt="service">
+			</div>
+		</div>
+	</section>
+	<!-- Calculator -->
+	<section class="window-calc grey-bg" id="calc">
+		<div class="container">
+			<h2 class="subtitle">Калькулятор стоимости ремонта окон</h2>
+			<div class="window-calc-container">
+				<div class="window-calc-container-item window-type-container">
+					<span class="window-calc-title"><strong>1.</strong> Какой вид ремонта нужен окну?</span>
+					<div class="grid-container window-type-list">
+						<div class="grid-container window-type-item">
+							<input type="checkbox" class="lead-form-checkbox" value="Регулировка">
+							<label for="" class="lead-form-checkbox-label">Регулировка</label>
 						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Ремонт ПВХ окон</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
+						<div class="grid-container window-type-item">
+							<input type="checkbox" class="lead-form-checkbox" value="Замена ручки">
+							<label for="" class="lead-form-checkbox-label">Замена ручки</label>
 						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
+						<div class="grid-container window-type-item">
+							<input type="checkbox" class="lead-form-checkbox" value="Замена уплотнителя">
+							<label for="" class="lead-form-checkbox-label">Замена уплотнителя</label>
 						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
+						<div class="grid-container window-type-item">
+							<input type="checkbox" class="lead-form-checkbox" value="Установка ограничителя">
+							<label for="" class="lead-form-checkbox-label">Установка ограничителя</label>
+						</div>
+						<div class="grid-container window-type-item">
+							<input type="checkbox" class="lead-form-checkbox" value="Пропенка отливов">
+							<label for="" class="lead-form-checkbox-label">Пропенка отливов</label>
+						</div>
+						<div class="grid-container window-type-item">
+							<input type="checkbox" class="lead-form-checkbox" value="Сервисное обслуживание">
+							<label for="" class="lead-form-checkbox-label">Сервисное обслуживание</label>
+						</div>
+						<div class="grid-container window-type-item">
+							<input type="checkbox" class="lead-form-checkbox" value="Установка подоконника">
+							<label for="" class="lead-form-checkbox-label">Установка подоконника</label>
+						</div>
+						<div class="grid-container window-type-item">
+							<input type="checkbox" class="lead-form-checkbox" value="Откосы из сендвич-панелей">
+							<label for="" class="lead-form-checkbox-label">Откосы из сендвич-панелей</label>
+						</div>
+					</div>
 				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-3.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Ремонт деревянных окон</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
+				<div class="window-calc-container-item window-size-container">
+					<span class="window-calc-title"><strong>2.</strong> Выберите вид окна и укажите его параметры</span>
+					<div class="grid-container window-size">
+						<div class="flex-container window-size-item">
+							<div class="window-size-img">
+								<div class="flex-container window-size-checkbox-container">
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Первый тип окон. Одно окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+								</div>
+								<img data-src="img/_src/main-page/calculator/window-1.jpg" class="lazy" alt="window">
+							</div>
+							<div class="window-sizes">
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-width">
+									<span class="window-size-text"> Ширина, мм</span>
+								</div>
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-height">
+									<span class="window-size-text"> Высота, мм</span>
+								</div>
 							</div>
 						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+						<div class="flex-container window-size-item">
+							<div class="window-size-img">
+								<div class="flex-container window-size-checkbox-container">
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Второй тип окон. Первое окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Второй тип окон. Второе окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+								</div>
+								<img data-src="img/_src/main-page/calculator/window-2.jpg" class="lazy" alt="window">
 							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
+							<div class="window-sizes">
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-width">
+									<span class="window-size-text"> Ширина, мм</span>
+								</div>
+								<div class="grid-container window-sizes-item window-size-height">
+									<input type="text" class="window-size-input">
+									<span class="window-size-text"> Высота, мм</span>
+								</div>
 							</div>
 						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
+						<div class="flex-container window-size-item">
+							<div class="window-size-img">
+								<div class="flex-container window-size-checkbox-container">
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Третий тип окон.Первое окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Третий тип окон.Второе окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Третий тип окон.Третье окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+								</div>
+								<img data-src="img/_src/main-page/calculator/window-3.jpg" class="lazy" alt="window">
+							</div>
+							<div class="window-sizes">
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-width">
+									<span class="window-size-text"> Ширина, мм</span>
+								</div>
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-height">
+									<span class="window-size-text"> Высота, мм</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex-container window-size-item">
+							<div class="window-size-img">
+								<div class="flex-container window-size-checkbox-container">
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Четвертый тип окон. Первое окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Четвертый тип окон. Второе окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+								</div>
+								<img data-src="img/_src/main-page/calculator/window-4.jpg" class="lazy" alt="window">
+							</div>
+							<div class="window-sizes">
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-width">
+									<span class="window-size-text"> Ширина, мм</span>
+								</div>
+								<div class="grid-container window-sizes-item window-size-height">
+									<input type="text" class="window-size-input">
+									<span class="window-size-text"> Высота, мм</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex-container window-size-item">
+							<div class="window-size-img">
+								<div class="flex-container window-size-checkbox-container">
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Пятый тип окон. Первое окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Пятый тип окон. Второе окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+								</div>
+								<img data-src="img/_src/main-page/calculator/window-5.jpg" class="lazy" alt="window">
+							</div>
+							<div class="window-sizes">
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-width">
+									<span class="window-size-text"> Ширина, мм</span>
+								</div>
+								<div class="grid-container window-sizes-item window-size-height">
+									<input type="text" class="window-size-input">
+									<span class="window-size-text"> Высота, мм</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex-container flex-container window-size-item">
+							<div class="window-size-img">
+								<div class="flex-container window-size-checkbox-container">
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Шестой тип окон. Первое окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox" value="Шестой тип окон. Второе окно открывается">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+									<div class="window-size-checkbox-item">
+										<input type="checkbox" id="" class="lead-form-checkbox window-size-checkbox">
+										<label for="" class="lead-form-checkbox-label window-size-label">Откр.</label>
+									</div>
+								</div>
+								<img data-src="img/_src/main-page/calculator/window-6.jpg" class="lazy" alt="window">
+							</div>
+							<div class="window-sizes">
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-width">
+									<span class="window-size-text"> Ширина, мм</span>
+								</div>
+								<div class="grid-container window-sizes-item">
+									<input type="text" class="window-size-input window-size-height">
+									<span class="window-size-text"> Высота, мм</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-4.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Ремонт алюминиевых окон</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
+				<div class="window-calc-container-item window-repair">
+					<span class="window-calc-title"><strong>3.</strong> Ремонт осуществляется</span>
+					<div class="grid-container window-repair-container">
+						<div class="window-repair-item">
+							<div class="window-repair-radio-container">
+								<div class="grid-container window-repair-radio-item">
+									<input type="checkbox" id="window-repair-radio-1" class="lead-form-radio window-repair-radio" value="За пределами города">
+									<label for="window-repair-radio-1" class="lead-form-radio-label window-repair-radio-label">За пределами города</label>
+								</div>
+							</div>
+							<div class="window-repair-radio-container">
+								<div class="flex-container window-repair-radio-item">
+									<input type="checkbox" id="window-repair-radio-2" class="lead-form-radio window-repair-radio" value="За городом">
+									<label for="window-repair-radio-2" class="lead-form-radio-label window-repair-radio-label">За городом</label>
+									<input type="text" class="window-repair-radio-dest">
+									<span class="window-repair-radio-dest-text">км</span>
+								</div>
 							</div>
 						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
+						<div class="grid-container window-repair-item">
+							<div class="lead-form-item lead-form-check">
+								<input type="checkbox" id="lead-form-calc-checkbox" class="lead-form-checkbox">
+								<label for="lead-form-calc-checkbox" class="lead-form-checkbox-label">
+									<span class="lead-form-checkbox-text">Согласие на обработку <a href="#">персональных данных</a></span>
+								</label>
 							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
+							<span class="btn btn-blue window-calc-submit">Вызвать мастера</span>
 						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
-				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-5.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Ремонт входных ПВХ дверей</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
-				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-6.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Ремонт балконных дверей</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
-				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-7.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Регулировка фурнитуры на окнах</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
-				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-8.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Замена и ремонт фурнитуры на окнах</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
-				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-9.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Замена стеклопакетов</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
-				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-10.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Замена уплотнителя</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
-				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-11.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Москитные сетки</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
-				</div>
-				<div class="services-page-list-item">
-					<header class="grid-container services-list-item-header">
-						<div class="services-list-img">
-							<img data-src="img/_src/all-services/service-12.jpg" class="lazy" alt="service">
-						</div>
-						<div class="services-list-content">
-							<h3 class="services-list-title"><a href="#">Защита на окна от детей</a></h3>
-							<div class="services-list-text">
-								В нашей компании можно заказать профессиональный ремонт и регулировку пластиковых окон отечественного и зарубежного производства. Мастер незамедлительно приедет на место работ для оценки состояния поломки, заключения договора. Наши преимущества: фиксированная стоимость и оперативность выполнения работ.
-							</div>
-						</div>
-					</header>
-					<footer class="services-list-item-footer">
-						<div class="services-list-price-table services-page-table">
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Регулировка фурнитуры ключами</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">350₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Ремонт фурнитуры баз замены деталей</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">500₽</span></div>
-							</div>
-							<div class="grid-container services-list-price-table-tr">
-								<div class="services-list-price-table-name">Замена оконной / балконной ручки</div>
-								<div class="services-list-price-table-prices">от <span class="red-price">750₽</span></div>
-							</div>
-						</div>
-						<a href="#" class="btn btn-grey services-list-btn">Подробнее</a>
-					</footer>
+					</div>
 				</div>
 			</div>
 		</div>
