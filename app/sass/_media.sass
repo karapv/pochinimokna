@@ -132,6 +132,12 @@
     grid-gap: 10px
   .our-cases-list-gallery-img
     height: 100%
+  .our-cases-slider-content
+    display: none
+  .our-cases-slider-btn
+    margin-top: 18px
+    display: block
+    width: 100%
   //How we work
   .how-we-work-list
     grid-template-columns: repeat(3,1fr)
@@ -168,6 +174,9 @@
     display: grid
     grid-template-columns: repeat(3,1fr)
     grid-gap: 10px
+  //Services page
+  .services-page-list
+    grid-template-columns: 100%
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1190px)
   /**/
@@ -195,11 +204,11 @@
   .h5-title, h5
     font-size: 14px
     line-height: 15px
-  .subtitle
+  .subtitle:not(.is-page-title)
     text-align: center
-  .subtitle::after
-    display: block
-    margin: 6px auto
+    &::after
+      display: block
+      margin: 6px auto
   //Why we
   .advantages-banner
     grid-template-columns: 100%
@@ -336,6 +345,13 @@
   .advantages-banner-sale-number
     font-size: 48px
     line-height: 20px
+  //Services page
+  .services-list-item-header
+    grid-template-columns: 100%
+  .services-list-btn
+    width: 100%
+  .maps-contacts-container
+    display: none
 @media  only screen and (max-width: 680px)
   //Popups
   .popup-review-main
