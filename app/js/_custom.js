@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
         elements_selector: ".lazy"
     });
     lazyLoadInstance.update();
+    //Telephone
+    $('.tel').each(function () {
+       let currentText = $(this).text();
+       currentText = currentText.replace(/\s/g, '');
+       $(this).attr('href',`tel:${currentText}`);
+    });
     //Popups
     const togglePopup = (button,item)=>{
         if($(item).length>0){
@@ -12,6 +18,22 @@ document.addEventListener("DOMContentLoaded", function() {
             $(button).click(function () {
                 $(item).fadeIn(500);
             });
+            closeButton.click(function () {
+                $(item).fadeOut(500);
+            })
+        }
+    };
+    const salePopup = (item)=>{
+        if($(item).length>0){
+            const closeButton = $(`${item} .popup-close`);
+            $(document).mouseleave(function(e){
+                if (e.clientY < 10) {
+                    $(item).fadeIn("fast");
+                }
+            });
+            setTimeout(()=>{
+                $(item).fadeIn("fast");
+            },18000);
             closeButton.click(function () {
                 $(item).fadeOut(500);
             })
@@ -393,8 +415,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     //Mobile header
     const HeaderBtnMobile = () =>{
-        $('.header-button-call').html(`<i class="fas fa-phone-alt"></i>`);
-        $('.header-button-call').click(function () {
+        const headerBtnCall = $('.header-button-call');
+        headerBtnCall.html(`<i class="fas fa-phone-alt"></i>`);
+        headerBtnCall.click(function () {
             $('.header-bottom').toggleClass('active');
         })
     };
@@ -409,5 +432,7 @@ document.addEventListener("DOMContentLoaded", function() {
     mobileSlider('.how-we-work-list',794);
     //Why important
     mobileSlider('.why-important-list',794);
+    //Sales popup
+    salePopup('.popup-sale');
 });
 

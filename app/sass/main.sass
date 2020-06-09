@@ -481,6 +481,33 @@ img
   grid-template-columns: repeat(4,1fr)
   grid-template-rows: 1fr
   grid-gap: 20px
+.popup-sale-container
+  padding: 70px
+  position: relative
+  .popup-close
+    top: 15px
+    right: 15px
+.popup-sale-title
+  margin-top: 0
+.popup-sale-content
+  margin: 20px 0  57px 0
+.popup-sale-header
+  width: 70%
+.popup-sale-form
+  grid-template-columns: repeat(2,1fr)
+  grid-template-rows: repeat(3,1fr)
+  grid-gap: 30px
+.popup-sale-form-submit
+  grid-column-start: 1
+  grid-column-end: 3
+  width: 100%
+.popup-sale-footer
+  width: 65%
+.popup-sale-img
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 395px
 //Header
 .header-top
   padding: 25px 0
@@ -683,6 +710,9 @@ img
   border-radius: 3px
   background-color: $white
   position: relative
+  &:hover
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 3px
   &>a
     display: block
     text-decoration: none
@@ -1378,4 +1408,17 @@ img
   margin-bottom: -20px
 .service-page-mobile-play,.btn-service-page
   display: none
+//Blog
+.blog-list
+  grid-template-columns: repeat(4,1fr)
+  grid-template-rows: 1fr
+  grid-gap: 30px
+.blog-list-img
+  img
+    width: 100%
+.blog-list-title
+  display: block
+  text-decoration: none
+  &:hover
+    border-bottom: 0
 @import 'media'

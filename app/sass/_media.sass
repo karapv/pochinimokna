@@ -214,6 +214,14 @@
     display: block
     width: 100%
     margin-bottom: 25px
+  //Blog
+  .blog-list
+    grid-template-columns: repeat(3,1fr)
+  //Popup sale
+  .popup-sale-img
+    display: none
+  .popup-sale-header,.popup-sale-footer
+    width: 100%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   h1,.h1-title,.title
@@ -250,6 +258,21 @@
     grid-template-columns: repeat(auto-fit,minmax(150px,300px))
   .window-repair-container,.window-repair-item
     grid-template-columns: 100%
+  //Popup sale
+  .subtitle.popup-title::after
+    margin: 6px 7px 6px 0
+  .subtitle.popup-sale-title
+    text-align: left
+    justify-content: space-between
+    &::after
+      order: 1
+  .popup-sale-form
+    grid-template-columns: 100%
+  .popup-sale-form-submit
+    grid-column-start: 1
+    grid-column-end: 1
+  .popup-sale-container
+    padding: 30px 20px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   .container
@@ -392,6 +415,9 @@
   .price-sale
     position: static
     margin-left: 7px
+  //Blog
+  .blog-list
+    grid-template-columns: repeat(2,1fr)
 @media  only screen and (max-width: 680px)
   //Popups
   .popup-review-main
@@ -400,7 +426,9 @@
     grid-template-columns: 100%
 /* Extra Small Devices, Phones */
 @media (max-width: 483px)
-  /**/
+  //Blog
+  .blog-list
+    grid-template-columns: 100%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
   /**/
