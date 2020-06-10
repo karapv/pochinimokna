@@ -118,8 +118,30 @@ body
   background-repeat: no-repeat
 //Titles
 h1,h2,h3,h4,h5,.h1-title,.h2-b-title,.h3-title,.h4-title,.h5-title,blockquote
-  margin: 10px 0
   color: $black
+ul:not([class]),ol:not([class]),p:not([class]),h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]),h5:not([class]),h6:not([class]),blockquote
+  margin-bottom: 30px
+  color: #424242
+h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]),h5:not([class]),h6:not([class])
+  font-weight: bold
+h1:not([class])
+  font-size: 36px
+  line-height: 30px
+h2:not([class])
+  font-size: 30px
+  line-height: 30px
+h3:not([class])
+  font-size: 28px
+  line-height: 30px
+h4:not([class])
+  font-size: 24px
+  line-height: 30px
+h5:not([class])
+  font-size: 22px
+  line-height: 30px
+h6:not([class])
+  font-size: 18px
+  line-height: 30px
 .h2-b-title
   color: #000000
   font-size: 48px
@@ -138,19 +160,21 @@ h1,h2,h3,h4,h5,.h1-title,.h2-b-title,.h3-title,.h4-title,.h5-title,blockquote
     background: url("../img/icons/title-dec.svg") no-repeat center/100%
 .info-title
   margin-top: 0
-h1,.h1-title
+.h1-title,.h2-title,.h3-title,.h4-title,.h5-title,.h6-title
+  margin: 10px 0
+h1[class],.h1-title
   @include font(bold,46px,52px)
   color: $black
-h2,.h2-title
+h2[class],.h2-title
   @include font(bold,36px,42px)
   color: $black
-h3,.h3-title
+h3[class],.h3-title
   @include font(bold,24px,28px)
-h4,.h4-title
+h4[class],.h4-title
   @include font(bold,18px,21px)
-h5,.h5-title
+h5[class],.h5-title
   @include font(normal,16px,21px)
-h6
+h6[class],.h6-title
   @include font(normal,12px,10px)
 b,strong
   font-weight: bold
@@ -1014,13 +1038,13 @@ img
 .our-cases-list
   margin-top: 60px
 .our-cases-list-item
-  grid-template-columns: 2.5fr 1.5fr
+  grid-template-columns: 2fr 1fr
   grid-gap: 20px
   grid-template-rows: 1fr
   &:not(:last-child)
     margin-bottom: 60px
 .our-cases-list-gallery
-  grid-template-columns: 3.5fr 1fr
+  grid-template-columns: 3fr 1fr
   grid-template-rows: 1fr
   grid-gap: 20px
 .our-cases-list-gallery-main
@@ -1037,7 +1061,7 @@ img
     height: 100%
     object-fit: cover
 .our-cases-slider-title
-  margin: 0 0 15px 0
+  margin: 0 0 5px 0
 .our-cases-slider-play
   color: $blue
   cursor: pointer
@@ -1223,7 +1247,7 @@ img
 .faq
   padding: 40px  0
 .faq-list
-  margin-top: 55px
+  margin-top: 30px
 .open-accordion,.faq-list-item
   transition: all 500ms ease-in-out
 .faq-list-item
@@ -1428,30 +1452,6 @@ img
   grid-template-columns: repeat(2,1fr)
   grid-template-rows: 1fr
   grid-gap: 30px
-.blog-page-content
-  ul:not([class]),ol:not([class]),p:not([class]),h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]),h5:not([class]),h6:not([class]),blockquote
-    margin-bottom: 30px
-    color: #424242
-  h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]),h5:not([class]),h6:not([class])
-    font-weight: bold
-  h1:not([class])
-    font-size: 36px
-    line-height: 30px
-  h2:not([class])
-    font-size: 30px
-    line-height: 30px
-  h3:not([class])
-    font-size: 28px
-    line-height: 30px
-  h4:not([class])
-    font-size: 24px
-    line-height: 30px
-  h5:not([class])
-    font-size: 22px
-    line-height: 30px
-  h6:not([class])
-    font-size: 18px
-    line-height: 30px
 .blog-page-banner-img
   border-radius: 3px
   overflow: hidden
@@ -1491,5 +1491,56 @@ img
     text-decoration: none
   .all-blogs-title:hover
     color: $blue
-
+//History
+.history-video
+  padding-top: 55px
+  padding-bottom: 160px
+//Portfolio
+.portfolio
+  padding-bottom: 60px
+//Answers
+.answers-container
+  margin: 50px 0
+//Contacts
+.contacts-form
+  position: static
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15)
+  border-radius: 3px
+.contacts-container
+  margin: 50px 0
+.contacts-container
+  grid-template-columns: 2fr 1fr
+  grid-gap: 30px
+  grid-template-rows: 1fr
+.contacts-info-top,.contacts-contact,.contacts-info-bottom
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+  grid-template-rows: 1fr
+.contacts-contact
+  color: $black
+  font-size: 24px
+  line-height: 36px
+.contacts-info-top
+  border-bottom: 3px solid #EFEFEF
+  padding-bottom: 30px
+.contacts-info-bottom
+  padding-top: 30px
+  p
+    font-size: 18px
+    line-height: 36px
+.bottom-req-fio
+  color: $black
+//not found
+.not-found-container
+  flex-direction: column
+  justify-content: center
+  text-align: center
+h1.not-found-title
+  font-size: 8rem
+  margin: 20px auto
+  line-height: 8rem
+.not-found-btn
+  text-decoration: none
+  display: block
+  margin: 20px auto
 @import 'media'

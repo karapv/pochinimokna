@@ -184,6 +184,9 @@
   //Blog page
   .blog-page-banner-container,.blog-page-columns
     grid-template-columns: 100%
+  //Contacts
+  .contacts-container
+    grid-template-columns: 100%
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1190px)
   /**/
@@ -230,22 +233,25 @@
     grid-template-columns: repeat(3,1fr)
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
-  h1,.h1-title,.title
+  .is-page-title
+    &::after
+      display: none
+  h1[class],.h1-title,.title
     font-size: 24px
     line-height: 28px
-  h2,.h2-title,.subtitle
+  h2[class],.h2-title,.subtitle
     font-size: 18px
     line-height: 28px
-  h3,.h3-title
+  h3[class],.h3-title
     font-size: 16px
     line-height: 19px
-  .h4-title, h4
+  .h4-title, h4[class]
     font-size: 15px
     line-height: 19px
-  .h5-title, h5
+  .h5-title, h5[class]
     font-size: 14px
     line-height: 15px
-  .subtitle:not(.is-page-title)
+  .subtitle:not(.is-page-title):not(.subtitle-right-after)
     text-align: center
     &::after
       display: block
@@ -279,6 +285,12 @@
     grid-column-end: 1
   .popup-sale-container
     padding: 30px 20px
+  //Contacts
+  .contacts-info-top
+    grid-template-columns: 100%
+  //Not found
+  h1.not-found-title
+    font-size: 4rem
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   .container
@@ -435,7 +447,6 @@
     height: 40px
     font-size: 72px
     text-align: left
-  .blog-page-content
     ul:not([class]),ol:not([class]),p:not([class]),h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]),h5:not([class]),h6:not([class]),blockquote
       margin-bottom: 10px
     h1:not([class])
@@ -463,12 +474,44 @@
     grid-template-columns: 100%
 @media  only screen and (max-width: 680px)
   //Popups
+  .popup-container
+    width: 100%
   .popup-review-main
     grid-template-rows: 150px
   .popup-call-form
     grid-template-columns: 100%
+  //History
+  .history-video,.portfolio-video
+    padding-top: 20px
+    padding-bottom: 20px
+    background-color: #F5F5F5
+    margin-top: 20px
+  //Contacts
+  .contacts-container
+    margin: 30px 0
+  .contacts-contact,.contacts-info-top,.contacts-info-bottom
+    grid-template-columns: 100%
+    grid-gap: 20px
+  .contacts-contact
+    font-size: 18px
+    line-height: 24px
+  .contacts-info-top
+    padding-bottom: 20px
+  .contacts-info-bottom
+    padding-top: 20px
+    p
+      font-size: 14px
+      line-height: 24px
+  .contacts-form
+    margin: 0 -20px
 /* Extra Small Devices, Phones */
 @media (max-width: 483px)
+  .youtube
+    .play
+      width: 40px
+      height: 40px
+    .youtube-text
+      font-size: 14px
   //Blog
   .blog-list
     grid-template-columns: 100%
