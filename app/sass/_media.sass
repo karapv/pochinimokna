@@ -181,6 +181,9 @@
   //Service page
   .service-page-banner-right
     grid-template-columns: 100%
+  //Blog page
+  .blog-page-banner-container,.blog-page-columns
+    grid-template-columns: 100%
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1190px)
   /**/
@@ -222,6 +225,9 @@
     display: none
   .popup-sale-header,.popup-sale-footer
     width: 100%
+  //Blog page
+  .all-blogs-list
+    grid-template-columns: repeat(3,1fr)
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   h1,.h1-title,.title
@@ -305,6 +311,7 @@
     grid-template-columns: auto
   // Why we
   .why-we-advantages
+    margin-top: 0
     .advantages-list-item
       text-align: center
     .advantages-img
@@ -418,6 +425,42 @@
   //Blog
   .blog-list
     grid-template-columns: repeat(2,1fr)
+  //Blog page
+  body
+    blockquote
+      grid-template-columns: 100%
+      padding-left: 20px
+  body blockquote::before
+    width: 40px
+    height: 40px
+    font-size: 72px
+    text-align: left
+  .blog-page-content
+    ul:not([class]),ol:not([class]),p:not([class]),h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]),h5:not([class]),h6:not([class]),blockquote
+      margin-bottom: 10px
+    h1:not([class])
+      font-size: 36px
+      line-height: 36px
+    h2:not([class])
+      font-size: 24px
+      line-height: 24px
+    h3:not([class])
+      font-size: 22px
+      line-height: 24px
+    h4:not([class])
+      font-size: 18px
+      line-height: 20px
+    h5:not([class])
+      font-size: 16px
+      line-height: 18px
+    h6:not([class])
+      font-size: 14px
+      line-height: 30px
+  .blog-page-slider-item
+    height: 164px
+    width: 277px
+  .all-blogs-list
+    grid-template-columns: 100%
 @media  only screen and (max-width: 680px)
   //Popups
   .popup-review-main

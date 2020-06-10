@@ -30,25 +30,26 @@ input, textarea
 ul
   list-style-type: none
 ul:not([class]) li,ol:not([class]) li
-  margin-bottom: 25px
+  margin-bottom: 15px
 ol:not([class])
   counter-reset: myCounter
   li
     @include list-type-none
-    padding-left: 50px
+    padding-left: 35px
     position: relative
     &:before
       counter-increment: myCounter
       content: counter(myCounter)
       display: inline-block
-      background: rgba(194, 219, 204, 0.3)
+      background: $blue
       border-radius: 3px
-      color: #199525
-      font-size: 14px
-      width: 30px
-      height: 30px
+      color: $white
+      font-size: 12px
+      font-weight: bold
+      width: 25px
+      height: 25px
       position: absolute
-      line-height: 35px
+      line-height: 27px
       text-align: center
       top: 0
       left: 0
@@ -58,7 +59,7 @@ ul:not([class])
   li
     @include list-type-none
     position: relative
-    padding-left: 24px
+    padding-left: 25px
     &:before
       content: ''
       width: 7px
@@ -68,7 +69,7 @@ ul:not([class])
       top: 35%
       left: 0
       border-radius: 50%
-      border: 2px solid #199525
+      background-color:  $blue
 button
   @include reset-button
   cursor: pointer
@@ -92,18 +93,21 @@ body
     border-bottom: 1px dotted $blue
   blockquote
     display: grid
-    grid-template-columns: 60px 1fr
+    grid-template-columns: 26px 1fr
     grid-gap: 25px
+    border-left: 2px solid $blue
+    align-items: center
+    >*
+      align-items: center
     &::before
       content: '”'
       display: block
       width: 60px
       height: 60px
       text-align: center
-      color: #199525
+      color: #EBEBEB
       font-size: 6em
       border-radius: 50%
-      background: #efefef
       line-height: 105px
   p
     margin-bottom: 14px
@@ -747,7 +751,10 @@ img
   padding: 55px 0
 .why-we-advantages
   justify-content: flex-start
-  margin: 55px -.7% 0 -.7%
+  margin-top: 55px
+  grid-template-columns: repeat(3,1fr)
+  grid-template-rows: repeat(2,1fr)
+  grid-gap: 30px
 .why-we-advantages-title
   font-size: 18px
   margin: 0
@@ -1416,4 +1423,73 @@ img
   text-decoration: none
   &:hover
     border-bottom: 0
+//Blog page
+.blog-page-banner-container
+  grid-template-columns: repeat(2,1fr)
+  grid-template-rows: 1fr
+  grid-gap: 30px
+.blog-page-content
+  ul:not([class]),ol:not([class]),p:not([class]),h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]),h5:not([class]),h6:not([class]),blockquote
+    margin-bottom: 30px
+    color: #424242
+  h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]),h5:not([class]),h6:not([class])
+    font-weight: bold
+  h1:not([class])
+    font-size: 36px
+    line-height: 30px
+  h2:not([class])
+    font-size: 30px
+    line-height: 30px
+  h3:not([class])
+    font-size: 28px
+    line-height: 30px
+  h4:not([class])
+    font-size: 24px
+    line-height: 30px
+  h5:not([class])
+    font-size: 22px
+    line-height: 30px
+  h6:not([class])
+    font-size: 18px
+    line-height: 30px
+.blog-page-banner-img
+  border-radius: 3px
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center
+.blog-page-columns
+  grid-template-columns: repeat(2,1fr)
+  grid-template-rows: 1fr
+  grid-gap: 30px
+.blog-page-url
+  border-radius: 3px
+  width: 100%
+  height: 100%
+  object-fit: cover
+  object-position: center
+.blog-page-slider-item
+  border-radius: 3px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center
+  &:not(.slick-center)
+    opacity: 0.3
+.all-blogs-list
+  margin-top: 55px
+  grid-template-columns: repeat(4,1fr)
+  grid-template-rows: 1fr
+  grid-gap: 30px
+.all-blogs
+  padding-bottom: 50px
+.all-blogs-item
+  a
+    text-decoration: none
+  .all-blogs-title:hover
+    color: $blue
+
 @import 'media'

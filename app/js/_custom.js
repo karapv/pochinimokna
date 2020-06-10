@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const salePopup = (item)=>{
         if($(item).length>0){
             const closeButton = $(`${item} .popup-close`);
-            $(document).mouseleave(function(e){
+            /*$(document).mouseleave(function(e){
                 if (e.clientY < 10) {
                     $(item).fadeIn("fast");
                 }
-            });
+            });*/
             setTimeout(()=>{
                 $(item).fadeIn("fast");
             },18000);
@@ -434,5 +434,15 @@ document.addEventListener("DOMContentLoaded", function() {
     mobileSlider('.why-important-list',794);
     //Sales popup
     salePopup('.popup-sale');
+    //Blog page slider
+    $('.blog-page-slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        centerMode: true,
+        variableWidth: true,
+        arrows: false,
+        adaptiveHeight: true
+    })
 });
 
