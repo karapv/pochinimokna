@@ -443,6 +443,12 @@ document.addEventListener("DOMContentLoaded", function() {
         variableWidth: true,
         arrows: false,
         adaptiveHeight: true
-    })
+    });
+    //Form file
+    $('.lead-form-file').change(function(){
+        let currentValue = $(this).val(),
+            filename = currentValue.replace(/.*\\/g,'');
+        $(this).parent().parent().find('.lead-form-file-text').text(filename);
+    });
 });
 

@@ -181,6 +181,7 @@
   //Service page
   .service-page-banner-right
     grid-template-columns: 100%
+    background-image: none !important
   //Blog page
   .blog-page-banner-container,.blog-page-columns
     grid-template-columns: 100%
@@ -296,7 +297,7 @@
   .container
     padding: 0 20px
   //All services
-  section[class],#footer
+  section[class]:not(.map-contacts),#footer
     padding-top: 30px
     padding-bottom: 30px
   .all-services
@@ -407,6 +408,8 @@
     .lead-form-check
       order: -1
       margin-bottom: 30px
+    .lead-form-checkbox-text
+      max-width: inherit
   //Price banner
   .advantages-banner-sale-title
     font-size: 18px

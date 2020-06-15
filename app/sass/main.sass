@@ -116,6 +116,8 @@ body
   margin-top: -70px
   background-position: top right
   background-repeat: no-repeat
+.ajax-loader
+  display: none !important
 //Titles
 h1,h2,h3,h4,h5,.h1-title,.h2-b-title,.h3-title,.h4-title,.h5-title,blockquote
   color: $black
@@ -273,6 +275,7 @@ img
   border-bottom: 1px solid transparent
   a
     word-break: break-word
+    width: max-content
 .site-contacts-info-text
   text-align: right
   font-size: 10px
@@ -322,6 +325,9 @@ img
   color: #9C9C9C
   height: 40px
   line-height: 40px
+  &:not(.lead-form-files):not(.lead-form-check):not(.lead-form-radio) input
+    width: 100%
+    font-size: inherit
 .lead-form-file,.lead-form-checkbox
   display: none
 .lead-form-files
@@ -442,7 +448,7 @@ img
   width: 100%
 .popup-write-form-top
   grid-template-columns: repeat(2,1fr)
-  grid-template-rows: repeat(4,1fr)
+  grid-template-rows: 1fr
   grid-gap: 30px
 .popup-write-textarea
   grid-column-start: 1
@@ -460,6 +466,8 @@ img
   justify-content: flex-start
   .lead-form-checkbox-text
     max-width: 240px
+  .popup-form-item
+    margin-left: 30px
 .subtitle.popup-title
   display: flex
   align-items: center
@@ -486,10 +494,13 @@ img
 .popup-review-main
   grid-template-columns: repeat(2,1fr)
   grid-gap: 30px
-  grid-template-rows: 350px
+  grid-template-rows: 1fr
   margin-bottom: 30px
 .popup-reviews-video-gallery
   display: none
+.popup-reviews-content
+  p
+    margin-bottom: 10px
 .popup-reviews-content-container
   grid-template-columns: 1.5fr 2fr
   grid-template-rows: 1fr
@@ -552,6 +563,8 @@ img
 .logo-img
   img
     height: 48px
+  a:hover
+    border-bottom: 0
 .logo-title
   font-weight: bold
   font-size: 18px
@@ -723,6 +736,7 @@ img
   padding: 50px 0
   &.ismain
     margin-top: -42px
+    padding-top: 85px
 .all-services-list
   margin: 55px 0 0 0
   justify-content: flex-start
@@ -900,6 +914,9 @@ img
   background: #FFFFFF
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
   border-radius: 3px
+.master-lead-text
+  p
+    margin-bottom: 0
 .master-lead-list
   padding: 30px 0 30px 50px
   justify-content: flex-start
@@ -963,7 +980,7 @@ img
   background-color: $white
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
   border-radius: 3px
-  padding: 20px
+  padding: 12px
   flex-direction: column
   justify-content: space-between
 .window-size-img
@@ -1060,6 +1077,9 @@ img
     width: 100%
     height: 100%
     object-fit: cover
+.our-cases-slider-content
+  p
+    margin-bottom: 10px
 .our-cases-slider-title
   margin: 0 0 5px 0
 .our-cases-slider-play
@@ -1367,10 +1387,12 @@ img
 .service-page-content
   color: $black
   margin-bottom: 55px
+  p
+    margin-bottom: 10px
 .service-page-nav
   grid-template-columns: repeat(5,1fr)
   grid-template-rows: 1fr
-  grid-gap: 20px
+  grid-gap: 15px
   text-align: center
   background-color: $white
   padding: 15px
@@ -1397,10 +1419,10 @@ img
   color: #FFFFFF
 .service-page-banner-right
   grid-template-columns: 1fr 2fr
-  grid-gap: 20px
+  grid-gap: 80px
   background-repeat: no-repeat
-  background-position: center bottom
-  background-size: contain
+  background-position: 26% bottom
+  background-size: 58%
 .service-page-play
   position: static
   align-items: start
@@ -1439,9 +1461,15 @@ img
   grid-template-columns: repeat(4,1fr)
   grid-template-rows: 1fr
   grid-gap: 30px
+  @include list-type-none
+  a:hover
+    border-bottom: 0
 .blog-list-img
   img
     width: 100%
+    max-height: 195px
+    object-position: center
+    object-fit: cover
 .blog-list-title
   display: block
   text-decoration: none
@@ -1486,6 +1514,9 @@ img
   grid-gap: 30px
 .all-blogs
   padding-bottom: 50px
+.all-blogs-img
+  img
+    width: 100%
 .all-blogs-item
   a
     text-decoration: none
@@ -1516,7 +1547,7 @@ img
   grid-template-columns: repeat(2,1fr)
   grid-gap: 30px
   grid-template-rows: 1fr
-.contacts-contact
+.contacts-info-top-adress
   color: $black
   font-size: 24px
   line-height: 36px
@@ -1543,4 +1574,14 @@ h1.not-found-title
   text-decoration: none
   display: block
   margin: 20px auto
+//Wordpress styles
+span.wpcf7-not-valid-tip
+  font-size: 11px
+.your-file
+  .wpcf7-not-valid-tip
+    display: none
+.btn-more
+  margin: 20px auto
+  &.done
+    background-color: #d4d4d4
 @import 'media'
