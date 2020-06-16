@@ -328,8 +328,6 @@ h1.title
   &:not(.lead-form-files):not(.lead-form-check):not(.lead-form-radio) input
     width: 100%
     font-size: inherit
-.lead-form-submit
-  width: 100%
 .lead-form-file,.lead-form-checkbox
   display: none
 .lead-form-files
@@ -677,6 +675,10 @@ h1.title
 .main-banner-content
   margin: 54px 0 70px 0
   max-width: 558px
+.main-banner-img
+  img
+    position: relative
+    right: -42px
 .banner-play-container
   position: absolute
   top: 30%
@@ -718,6 +720,7 @@ h1.title
   border-radius: 3px
   padding-top: 30px
   padding-bottom: 30px
+  max-width: 1320px
 h2.lead-form-title
   font-size: 26px
   margin: 0
@@ -744,7 +747,7 @@ h2.lead-form-title
     padding-top: 85px
 .all-services-list
   margin: 55px 0 0 0
-  justify-content: flex-start
+  justify-content: space-between
   grid-template-columns: repeat(auto-fit,minmax(200px,205px))
   grid-template-rows: repeat(2,1fr)
   grid-gap: 20px
@@ -798,7 +801,7 @@ h2.lead-form-title
   grid-template-columns: repeat(3,1fr)
   grid-template-rows: repeat(2,1fr)
   grid-gap: 30px
-.why-we-advantages-title
+h3.why-we-advantages-title
   font-size: 18px
   margin: 0
 .advantages-text
@@ -1102,6 +1105,9 @@ h2.lead-form-title
   padding-bottom: 20px
   >*
     align-self: center
+.our-partners-list-item
+  img
+    opacity: .5
 /*How work*/
 .how-we-work
   padding: 60px 0
@@ -1146,6 +1152,8 @@ h2.lead-form-title
   grid-template-columns: 1fr 3fr
   grid-gap: 44px
   grid-template-rows: 1fr
+.services-price-menu-item
+  position: relative
 .services-menu-header
   padding: 20px 30px
   margin-bottom: 10px
@@ -1229,7 +1237,7 @@ h2.lead-form-title
   margin-top: 55px
   grid-template-columns: repeat(4,1fr)
   grid-template-rows: repeat(2,1fr)
-  grid-gap: 15px
+  grid-gap: 30px
 .why-important-list-item-container
   background: #FFFFFF
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
@@ -1294,12 +1302,13 @@ h2.lead-form-title
   align-items: center
   >*
     align-self: center
-.faq-list-title
+h3.faq-list-title
   font-size: 18px
   margin: 0
 .faq-list-footer
   padding: 10px 30px 10px 30px
   display: none
+  color: $black
 .open-accordion
   color: $blue
 /*Map contacts*/
