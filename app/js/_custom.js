@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     lazyLoadInstance.update();
     //Telephone
     $('.tel').each(function () {
-       let currentText = $(this).text();
-       currentText = currentText.replace(/\s/g, '');
-       $(this).attr('href',`tel:${currentText}`);
+        let currentText = $(this).text();
+        currentText = currentText.replace(/\s/g, '');
+        $(this).attr('href',`tel:${currentText}`);
     });
     //Popups
     const togglePopup = (button,item)=>{
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
             resize = true;
             if(resize === true) {
                 clearTimeout(doit);
-                doit = setTimeout(checkWidth, 100);
+                doit = setTimeout(checkWidth, 1000);
             }
         });
     };
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
             resize = true;
             if(resize === true) {
                 clearTimeout(doit);
-                doit = setTimeout(checkWidth, 100);
+                doit = setTimeout(checkWidth, 10000);
             }
         });
     };
@@ -232,13 +232,13 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     // Youtube
 
-        window.almComplete = function (alm) {
-            //Blog page
-            if($('.blog-nav-item').length>0){
-                tabElem('.blog-nav-item','.blog-post-list','blog-container');
-            }
-            youtubeChange();
-        };
+    window.almComplete = function (alm) {
+        //Blog page
+        if($('.blog-nav-item').length>0){
+            tabElem('.blog-nav-item','.blog-post-list','blog-container');
+        }
+        youtubeChange();
+    };
     //Catalog
     const catalogHover = () =>{
         $('.catalog-toggle').mouseenter(function () {
@@ -295,17 +295,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     $('.window-calc-submit').click(function () {
-       if($(this).attr('data-type')){
-           $('.window-type-repair').val($(this).attr('data-type'));
-       }
-       if($(this).attr('data-type-window')){
-           $('.window-type-window').val($(this).attr('data-type-window'));
-       }
-       if($(this).attr('data-delivery')){
-           $('.window-type-window-delivery').val($(this).attr('data-delivery').replace(',','')+' '+$('.window-repair-radio-dest').val()+'км');
-       }
-       calculatorSizes('.window-size-width','data-number-item','.window-type-window-width');
-       calculatorSizes('.window-size-height','data-number-item','.window-type-window-height');
+        if($(this).attr('data-type')){
+            $('.window-type-repair').val($(this).attr('data-type'));
+        }
+        if($(this).attr('data-type-window')){
+            $('.window-type-window').val($(this).attr('data-type-window'));
+        }
+        if($(this).attr('data-delivery')){
+            $('.window-type-window-delivery').val($(this).attr('data-delivery').replace(',','')+' '+$('.window-repair-radio-dest').val()+'км');
+        }
+        calculatorSizes('.window-size-width','data-number-item','.window-type-window-width');
+        calculatorSizes('.window-size-height','data-number-item','.window-type-window-height');
     });
     //Reviews video
     if($('.our-cases-slider-play').length>0) {
@@ -443,4 +443,3 @@ document.addEventListener("DOMContentLoaded", function() {
         $(this).parent().parent().find('.lead-form-file-text').text(filename);
     });
 });
-
