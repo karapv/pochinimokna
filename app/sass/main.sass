@@ -183,7 +183,7 @@ b,strong
 img
   max-width: 100%
   height: auto
-.title
+h1.title
   font-size: 72px
   line-height: 84px
   text-transform: uppercase
@@ -328,6 +328,8 @@ img
   &:not(.lead-form-files):not(.lead-form-check):not(.lead-form-radio) input
     width: 100%
     font-size: inherit
+.lead-form-submit
+  width: 100%
 .lead-form-file,.lead-form-checkbox
   display: none
 .lead-form-files
@@ -547,6 +549,8 @@ img
   padding: 25px 0
   background: $white
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05)
+  position: relative
+  z-index: 1
 .header-top-container
   grid-template-columns: 200px 230px 1fr 230px
   grid-template-rows: 1fr
@@ -712,8 +716,9 @@ img
   background: #FFFFFF
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
   border-radius: 3px
-  padding: 30px
-.lead-form-title
+  padding-top: 30px
+  padding-bottom: 30px
+h2.lead-form-title
   font-size: 26px
   margin: 0
 .lead-form-banner-header
