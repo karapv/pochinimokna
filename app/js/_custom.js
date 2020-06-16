@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //Mobile slider
     const mobileSlider = (elem,mobileWidth) =>{
         let resize = false;
-        if(resize === false) {
+        const checkWidth = () =>{
             if ($(window).width() <= mobileWidth) {
                 $(elem).slick({
                     infinite: true,
@@ -165,40 +165,32 @@ document.addEventListener("DOMContentLoaded", function() {
                 $(elem).filter('.slick-initialized').slick('unslick');
             }
         }
+        let doit;
+        checkWidth();
         $(window).resize(function() {
             resize = true;
             if(resize === true) {
-                if ($(window).width() <= mobileWidth) {
-                    $(elem).slick({
-                        infinite: true,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        prevArrow: '<span class="slider-btn slider-btn-left"></span>',
-                        nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
-                    })
-                } else if ($(window).width() > mobileWidth && $(elem).hasClass('slick-initialized')) {
-                    $(elem).filter('.slick-initialized').slick('unslick');
-                }
+                clearTimeout(doit);
+                doit = setTimeout(checkWidth, 100);
             }
         });
     };
     const AdaptiveBlocks = (mobileWidth,desktopCallback,mobileCallback)=>{
-        let resize = false;
-        if(resize === false) {
+        const checkWidth = () =>{
             if ($(window).width() <= mobileWidth) {
                 mobileCallback();
             } else if ($(window).width() > mobileWidth) {
                 desktopCallback();
             }
         }
+        let doit;
+        let resize = false;
+        checkWidth();
         $(window).resize(function() {
             resize = true;
             if(resize === true) {
-                if ($(window).width() <= mobileWidth) {
-                    mobileCallback();
-                } else if ($(window).width() > mobileWidth) {
-                    desktopCallback();
-                }
+                clearTimeout(doit);
+                doit = setTimeout(checkWidth, 100);
             }
         });
     };
