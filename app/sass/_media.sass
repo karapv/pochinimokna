@@ -10,8 +10,11 @@
   //Header
   .catalog-toggle
     order: -1
-  .header-button-call,.catalog-toggle
     width: 40px
+    &.mobile
+      display: grid
+    &.desktop
+      display: none
   .toggle-title
     display: none
   .toggle-decs
@@ -80,6 +83,12 @@
     font-weight: bold
   .header-mobile-text
     color: $white
+  .header-button-call
+    display: none
+  .header-button-contact
+    display: block
+  .header-button-contacts
+    width: 40px
   /*Main banner*/
   .main-banner
     background: #F3FAFA
@@ -269,6 +278,7 @@
   //Window size
   .window-size
     grid-template-columns: repeat(auto-fit,minmax(150px,300px))
+    justify-content: center
   .window-repair-container,.window-repair-item
     grid-template-columns: 100%
   //Popup sale
@@ -324,6 +334,7 @@
     grid-template-columns: auto
   // Why we
   .why-we-advantages
+    display: block
     margin-top: 0
     .advantages-list-item
       text-align: center

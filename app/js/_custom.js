@@ -242,28 +242,12 @@ document.addEventListener("DOMContentLoaded", function() {
         youtubeChange();
     };
     //Catalog
-    const catalogClickDesk = () =>{
-        $('.catalog-toggle').click(function () {
-            $(this).toggleClass('active');
-            if($(this).hasClass('active')){
-                $('.catalog-menu-wrapper').stop().fadeIn('fast');
-            }else{
-                $('.catalog-menu-wrapper').stop().fadeOut('fast');
-            }
-
-        });
-    };
-    const catalogClickMobile = () =>{
-        $('.catalog-toggle').click(function () {
-            $(this).toggleClass('active');
-            if($(this).hasClass('active')) {
-                $('.header-nav').stop().fadeIn('fast');
-            }else{
-                $('.header-nav').stop().fadeOut('fast');
-            }
-        });
-    };
-    AdaptiveBlocks(1280,catalogClickDesk,catalogClickMobile);
+    $('.catalog-toggle.desktop').click(function () {
+        $('.catalog-menu-wrapper').fadeToggle('fast');
+    });
+    $('.catalog-toggle.mobile').click(function () {
+        $('.header-nav').fadeToggle('fast');
+    })
     //Banner popup
     togglePopup('.play-banner-popup','.popup-video');
     //Projects slider
@@ -289,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function() {
     togglePopup('.btn-master','.popup-master');
     togglePopup('.window-calc-submit','.popup-master');
     togglePopup('.btn-write','.popup-write');
-    togglePopup('.btn-call:not(.header-button-call)','.popup-call');
+    togglePopup('.btn-call','.popup-call');
     //Calculator
     calculatorLabelChecker('.window-type-item','.lead-form-checkbox','.lead-form-checkbox-label','window-type');
     calculatorLabelChecker('.window-size-checkbox-item','.lead-form-checkbox','.lead-form-checkbox-label','window-size');
@@ -416,18 +400,10 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
     //Mobile header
-    const HeaderBtnMobile = () =>{
-        const headerBtnCall = $('.header-button-call');
-        headerBtnCall.html(`<i class="fas fa-phone-alt"></i>`);
-        headerBtnCall.click(function () {
-            $('.header-bottom').toggleClass('active');
-        })
-    };
-    const HeaderBtnDesktop = () =>{
-        $('.header-button-call').html(`Перезвонить нам`);
-        togglePopup('.header-button-call','.popup-call');
-    };
-    AdaptiveBlocks(1280,HeaderBtnDesktop,HeaderBtnMobile);
+    $('.header-button-contact').click(function () {
+        $('.header-bottom').toggleClass('active');
+    })
+
     //Why we slider
     mobileSlider('.why-we-advantages',794);
     //How we work
