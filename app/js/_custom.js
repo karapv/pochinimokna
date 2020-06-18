@@ -185,12 +185,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         let doit;
         let resize = false;
-        checkWidth();
+        if(resize === false) {
+            checkWidth();
+        }
         $(window).resize(function() {
             resize = true;
             if(resize === true) {
                 clearTimeout(doit);
-                doit = setTimeout(checkWidth, 10000);
+                doit = setTimeout(checkWidth, 1000);
             }
         });
     };
@@ -241,16 +243,24 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     //Catalog
     const catalogHover = () =>{
-        $('.catalog-toggle').mouseenter(function () {
-            $('.catalog-menu-wrapper').fadeIn('fast');
-        });
-        $('.catalog-menu-wrapper').mouseleave(function () {
-            $('.catalog-menu-wrapper').fadeOut('fast');
+        $('.catalog-toggle').click(function () {
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')){
+                $('.catalog-menu-wrapper').stop().fadeIn('fast');
+            }else{
+                $('.catalog-menu-wrapper').stop().fadeOut('fast');
+            }
+
         });
     };
     const catalogClick = () =>{
         $('.catalog-toggle').click(function () {
-            $('.header-nav').fadeToggle('fast');
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')) {
+                $('.header-nav').stop().fadeIn('fast');
+            }else{
+                $('.header-nav').stop().fadeOut('fast');
+            }
         });
     };
     AdaptiveBlocks(1280,catalogHover,catalogClick);
