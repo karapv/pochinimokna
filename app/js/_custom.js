@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
             resize = true;
             if(resize === true) {
                 clearTimeout(doit);
-                doit = setTimeout(checkWidth, 1000);
+                doit = setTimeout(checkWidth, 1);
             }
         });
     };
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function() {
             resize = true;
             if(resize === true) {
                 clearTimeout(doit);
-                doit = setTimeout(checkWidth, 1000);
+                doit = setTimeout(checkWidth, 1);
             }
         });
     };
@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function() {
         youtubeChange();
     };
     //Catalog
-    const catalogHover = () =>{
+    const catalogClickDesk = () =>{
         $('.catalog-toggle').click(function () {
             $(this).toggleClass('active');
             if($(this).hasClass('active')){
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         });
     };
-    const catalogClick = () =>{
+    const catalogClickMobile = () =>{
         $('.catalog-toggle').click(function () {
             $(this).toggleClass('active');
             if($(this).hasClass('active')) {
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     };
-    AdaptiveBlocks(1280,catalogHover,catalogClick);
+    AdaptiveBlocks(1280,catalogClickDesk,catalogClickMobile);
     //Banner popup
     togglePopup('.play-banner-popup','.popup-video');
     //Projects slider
