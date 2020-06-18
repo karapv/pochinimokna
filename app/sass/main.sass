@@ -265,6 +265,9 @@ h1.title
   font-weight: bold
   border-radius: 3px
   border: 1px solid rgba(194, 64, 64, 0.15)
+.site-contacts-info-container
+  text-align: right
+  width: max-content
 .site-contacts-info
   color: $black
   font-weight: bold
@@ -272,17 +275,23 @@ h1.title
   text-decoration: none
   font-size: 16px
   line-height: 17px
+  text-align: left
   border-bottom: 1px solid transparent
   a
     word-break: break-word
     width: max-content
+
+    text-align: left
 .site-contacts-info-text
   text-align: right
-  font-size: 10px
+  font-size: 12px
   line-height: 11px
   color: $blue
   border-bottom: 1px dotted $blue
   cursor: pointer
+  &.site-contact-graphic
+    border-bottom: 0
+    color: #8A8A8A
 .site-contacts-graphic
   color: $black
   border-bottom: 0
@@ -805,7 +814,7 @@ h3.why-we-advantages-title
   font-size: 18px
   margin: 0
 .advantages-text
-  margin-top: 10px
+  margin-top: 14px
 .advantages-banner
   margin-top: 55px
   background-repeat: no-repeat
@@ -814,9 +823,6 @@ h3.why-we-advantages-title
   grid-template-columns: 1fr 1fr 1.5fr
   grid-template-rows: 1fr
   grid-gap: 30px
-.advantages-list-item
-  flex: 1 0 420px
-  margin: 0.7%
 .advantages-banner-text
   font-size: 16px
   line-height: 22px
@@ -866,6 +872,7 @@ h3.why-we-advantages-title
   right: 5px
 .projects-slider-item
   height: auto
+  min-height: 350px
 .projects-slider-wrapper
   padding: 0 30px
   background-size: cover
