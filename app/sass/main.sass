@@ -160,6 +160,9 @@ h6:not([class])
     width: 30px
     height: 10px
     background: url("../img/icons/title-dec.svg") no-repeat center/100%
+  &.is-page-title
+    font-size: 36px
+    line-height: 42px
 .info-title
   margin-top: 0
 .h1-title,.h2-title,.h3-title,.h4-title,.h5-title,.h6-title
@@ -1211,7 +1214,7 @@ h3.why-we-advantages-title
   margin-bottom: 33px
 /*Video message*/
 .video-message
-  padding: 100px 0
+  padding-top: 50px
 .video-message-container
   grid-template-columns: repeat(2,1fr)
   grid-column-gap: 20px
@@ -1564,12 +1567,13 @@ h3.faq-list-title
 .history-video
   padding-top: 55px
   padding-bottom: 160px
-//Portfolio
-.portfolio
-  padding-bottom: 60px
 //Answers
 .answers-container
   margin: 50px 0
+.answers-content
+  p
+    color: #424242
+    font-size: 18px
 //Contacts
 .contacts-form
   position: static
@@ -1589,6 +1593,7 @@ h3.faq-list-title
   color: $black
   font-size: 24px
   line-height: 36px
+  font-weight: normal
 .contacts-info-top
   border-bottom: 3px solid #EFEFEF
   padding-bottom: 30px
@@ -1621,5 +1626,7 @@ span.wpcf7-not-valid-tip
 .btn-more
   margin: 20px auto
   &.done
-    background-color: #d4d4d4
+    background: #d4d4d4
+.why-we-history-block
+  margin-top: -135px
 @import 'media'
