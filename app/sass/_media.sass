@@ -243,6 +243,9 @@
     grid-template-columns: repeat(3,1fr)
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
+  .slider-btn
+    width: 20px
+    height: 13px
   .is-page-title
     &::after
       display: none
@@ -332,6 +335,8 @@
     width: 100%
   .master-lead-item
     grid-template-columns: 40px 1fr
+  .master-lead
+    margin: 0
   //Window type
   .window-type-list
     grid-template-columns: auto
@@ -344,6 +349,8 @@
     .advantages-img
       img
         margin: 20px auto
+  .advantages-text
+    padding: 0 40px
   // How work
   .how-we-work-list
     display: block
@@ -352,8 +359,14 @@
     justify-content: center
     grid-template-columns: auto auto
   //Project slider
-  .projects-slider .slick-track
-    display: block
+  .projects-slider
+    .slick-track
+      display: block
+    .slider-btn
+      background: url('../img/icons/right.svg') no-repeat center/60%,rgba(82, 196, 196, 0.3)
+      border-radius: 50%
+      width: 32px
+      height: 32px
   .project-slider-img
     display: block
     height: 190px
@@ -425,12 +438,17 @@
     .lead-form-checkbox-text
       max-width: inherit
   //Price banner
+  .advantages-banner
+    background-position: -203px
   .advantages-banner-sale-title
     font-size: 18px
     line-height: 21px
+    padding-left: 15px
   .advantages-banner-sale-number
     font-size: 48px
     line-height: 20px
+  .advantages-banner-text
+    padding-left: 24%
   //Services page
   .services-list-item-header
     grid-template-columns: 100%
@@ -493,6 +511,9 @@
     margin-top: 0
 @media  only screen and (max-width: 680px)
   //Popups
+  .popup-container
+    iframe,.youtube
+      height: auto
   .popup-container
     width: 100%
   .popup-review-main
