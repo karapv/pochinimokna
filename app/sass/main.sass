@@ -116,6 +116,7 @@ body
   margin-top: -70px
   background-position: top right
   background-repeat: no-repeat
+  background-size: 51%
 .ajax-loader
   display: none !important
 //Titles
@@ -614,6 +615,7 @@ h1.title
   margin: .7%
   a
     text-decoration: none
+    font-weight: normal
   &::before
     content: ''
     width: 10px
@@ -800,6 +802,7 @@ h2.lead-form-title
   text-decoration: none
   color: $black
   padding: 20px 15px
+  font-weight: normal
   &:hover
     color: $blue
 .all-services-sale
@@ -828,7 +831,7 @@ h3.why-we-advantages-title
   font-size: 18px
   margin: 0
 .advantages-text
-  margin-top: 14px
+  margin-top: 5px
   p
     margin-bottom: 0
 .advantages-banner
@@ -844,6 +847,7 @@ h3.why-we-advantages-title
   line-height: 22px
   color: $black
   padding: 40px 0
+  font-weight: normal
   p
     margin-bottom: 0
 .advantages-banner-sale
@@ -1241,6 +1245,8 @@ h3.why-we-advantages-title
 /*Employees*/
 .employees
   padding: 70px 0 48px 0
+  &.is-history
+    padding-top: 0
 .employees-slider
   margin-top: 82px
   .slick-track
@@ -1279,12 +1285,13 @@ h3.why-we-advantages-title
   margin-top: 33px
   color: $black
 .why-important-list-item-last
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
-  box-shadow: none
-  align-content: space-between
-  padding: 30px
+  .why-important-list-item-container
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: top center
+    box-shadow: none
+    align-content: space-between
+    height: 90%
 .why-important-title-last
   font-weight: bold
   font-size: 20px
@@ -1377,6 +1384,7 @@ h3.faq-list-title
       background: rgba(39, 122, 122, 0.3)
   a
     text-decoration: none
+    font-weight: normal
 .footer-bottom
   margin-top: 40px
   grid-template-columns: repeat(6,1fr)
@@ -1563,6 +1571,9 @@ h3.faq-list-title
     text-decoration: none
   .all-blogs-title:hover
     color: $blue
+.blog-page-slider-container
+  .h1-title
+    text-align: center
 //History
 .history-video
   padding-top: 55px

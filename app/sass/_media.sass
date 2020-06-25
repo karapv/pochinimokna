@@ -310,6 +310,8 @@
     font-size: 4rem
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
+  .site-contacts-info-text,.site-contacts-info-container
+    text-align: left
   .container
     padding: 0 20px
   //All services
@@ -326,6 +328,15 @@
     padding: 10px 5px
   .all-services-list-item
     width: 205px
+  h3.services-page-list-title
+    font-size: 18px
+    line-height: 20px
+    margin-bottom: 15px
+  .services-page-table
+    display: none
+    &.services-page-table-mobile
+      display: block
+      margin-bottom: 15px
   //Master Lead
   .master-lead-list,.lead-form-master-container
     grid-template-columns: 100%
@@ -401,8 +412,7 @@
   .why-important-list
     display: block
   .why-important-list-item-container
-    max-width: 280px
-    margin: 20px auto
+    margin: 20px
     min-height: 280px
   //Footer
   .footer-menu,.footer-bottom
@@ -555,6 +565,9 @@
   //Blog
   .blog-list
     grid-template-columns: 100%
+  //Out partners
+  .our-partners-list
+    grid-template-columns: repeat(2,1fr)
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
   /**/

@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if ($(window).width() > mobileWidth) {
                 desktopCallback();
             }
-        }
+        };
         let doit;
         let resize = false;
         if(resize === false) {
