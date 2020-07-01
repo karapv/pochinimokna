@@ -344,8 +344,6 @@ h1.title
   &:not(.lead-form-files):not(.lead-form-check):not(.lead-form-radio) input
     width: 100%
     font-size: inherit
-.lead-form-file,.lead-form-checkbox
-  display: none
 .lead-form-files
   padding-left: 0
   padding-top: 0
@@ -370,11 +368,18 @@ h1.title
 .lead-form-check
   border: none
   padding: 0
-.lead-form-checkbox:checked + .lead-form-checkbox-label::before
-    background: url('../img/icons/form-done.svg') no-repeat center/contain $white
-.lead-form-checkbox-label
+.lead-form-checkbox:checked::before,.wpcf7-acceptance .lead-form-checkbox:checked::before
+  background: url('../img/icons/form-done.svg') no-repeat center/contain $white
+.lead-form-check,.wpcf7-acceptance label
   display: flex
   align-items: center
+.wpcf7-acceptance label .wpcf7-list-item-label,.lead-form-checkbox-label
+    max-height: 40px
+.wpcf7-acceptance .lead-form-checkbox,.lead-form-checkbox
+  width: 20px
+  height: 20px
+  @include reset-button
+.lead-form-checkbox,.wpcf7-acceptance .lead-form-checkbox
   &::before
     content: ''
     display: inline-block
@@ -386,6 +391,8 @@ h1.title
     height: 20px
     vertical-align: sub
     background-color: $white
+.lead-form-file
+  display: none
 .lead-form-checkbox-text
   display: inline-block
   line-height: 20px
@@ -578,6 +585,13 @@ h1.title
   grid-template-rows: 1fr
   justify-content: start
   grid-gap: 25px
+  text-decoration: none
+  border: none
+  &:hover
+    text-decoration: none
+    border: none
+    .logo-title,.logo-subtitle
+      color: $blue
 .logo-img
   img
     height: 48px
@@ -679,6 +693,8 @@ h1.title
   @include reset-button
   background-color: transparent
   color: $blue
+.search-text
+  font-weight: bold
 .header-mobile
   display: none
 .header-button-contact,.header-button-call
@@ -946,24 +962,28 @@ h3.why-we-advantages-title
   margin: 60px auto 31px auto
 .master-lead-container
   margin-top: 55px
-  grid-template-columns: 4fr 1fr 4fr
+  grid-template-columns: 4fr 1.5fr 4fr
   grid-template-rows: 1fr
   background: #FFFFFF
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
   border-radius: 3px
 .master-lead-text
+  line-height: 20px
   p
     margin-bottom: 0
 .master-lead-list
   padding: 30px 0 30px 50px
   justify-content: flex-start
   grid-template-columns: repeat(2,1fr)
-  grid-template-rows: repeat(3,1fr)
-  grid-gap: 10px
+  grid-template-rows: auto
+  grid-gap: 30px
 .master-lead-item
   grid-template-columns: 42px 230px
   grid-template-rows: 1fr
   grid-gap: 15px
+  align-items: center
+  &>*
+    align-self: center
 .master-lead-done
   background: #FAFAFA
   width: 43px
@@ -976,8 +996,8 @@ h3.why-we-advantages-title
   img
     position: absolute
     width: 264px
-    left: -85px
-    top: -22px
+    left: -42px
+    top: -51px
     display: block
     max-width: inherit
 .lead-form-master-container
@@ -1007,6 +1027,8 @@ h3.why-we-advantages-title
   grid-gap: 20px
   grid-template-rows: repeat(2,1fr)
 .window-type-item
+  grid-template-columns: 20px 1fr
+  grid-gap: 15px
   .lead-form-checkbox-label
     &::before
       margin-right: 15px
@@ -1031,12 +1053,13 @@ h3.why-we-advantages-title
   top: 15%
   justify-content: center
 .window-size-label
-  flex-direction: column
   color: $white
-  &::before
-    order: 2
+  order: -1
 .window-size-checkbox-item
   padding: 0 10px
+  display: flex
+  flex-direction: column
+  align-items: center
 .window-sizes
   margin-top: 25px
 .window-sizes-item
@@ -1048,6 +1071,7 @@ h3.why-we-advantages-title
   background: #FFFFFF
   border: 1px solid #EBEBEB
   border-radius: 3px
+  text-align: center
   &:focus,&:hover
     border: 1px solid #EBEBEB
 .window-size-text
@@ -1072,11 +1096,8 @@ h3.why-we-advantages-title
   width: 60px
   height: 33px
   margin: 0 5px
-.window-repair-radio-dest-text
-  width: 10px
-  display: block
-  word-break: break-word
   text-align: center
+.window-repair-radio-dest-text
   line-height: 16px
 .window-repair-item
   grid-template-columns: 1fr 1fr
@@ -1218,7 +1239,7 @@ h3.why-we-advantages-title
   margin-bottom: 33px
 /*Video message*/
 .video-message
-  padding-top: 50px
+  padding: 50px 0
 .video-message-container
   grid-template-columns: repeat(2,1fr)
   grid-column-gap: 20px
@@ -1318,7 +1339,6 @@ h3.why-we-advantages-title
 .open-accordion,.faq-list-item
   transition: all 500ms ease-in-out
 .faq-list-item
-  margin-bottom: 25px
   cursor: pointer
   padding: 20px
   &.active
@@ -1329,6 +1349,8 @@ h3.why-we-advantages-title
       display: block
     .open-accordion
       transform: rotate(90deg)
+.faq-list-item:not(:last-child)
+  margin-bottom: 25px
 .faq-list-header
   grid-template-rows: 1fr
   grid-template-columns: 7px 1fr
@@ -1371,6 +1393,9 @@ h3.faq-list-title
   grid-template-rows: repeat(3,1fr)
   padding-bottom: 39px
   border-bottom: 4px solid #ECECEC
+.footer-title
+  text-decoration: none
+  border: none
 .footer-menu-item
   &::before
     content: ''

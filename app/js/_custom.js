@@ -20,7 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             closeButton.click(function () {
                 $(item).fadeOut(500);
-            })
+            });
+            $(document).mouseup(function (e) {
+                const popup_container = $(`${item} .popup-container`);
+                if (popup_container.has(e.target).length === 0){
+                    popup_container.parent().parent().fadeOut('slow');
+                }
+            });
         }
     };
     const salePopup = (item)=>{
@@ -33,10 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
             });*/
             setTimeout(()=>{
                 $(item).fadeIn("fast");
-            },18000);
+            },60000);
             closeButton.click(function () {
                 $(item).fadeOut(500);
-            })
+            });
+            $(document).mouseup(function (e) {
+                const popup_container = $(`${item} .popup-container`);
+                if (popup_container.has(e.target).length === 0){
+                    popup_container.parent().parent().fadeOut('slow');
+                }
+            });
         }
     };
     //Calculator check
@@ -50,6 +62,18 @@ document.addEventListener("DOMContentLoaded", function() {
             })
         }
     };
+    //Fancy gallery
+    const fancyGall = () =>{
+        const casesItem = $('.our-cases-list-item');
+        let count = 0;
+        casesItem.each(function () {
+            count++;
+            $(this).find('.fancy-gallery').attr('data-fancybox',`gallery-${count}`);
+
+        });
+
+    };
+    fancyGall();
     //Calculator checkboxes
     const calculatorCheckox = (item,dataType) =>{
         if($(item).length>0){
@@ -134,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     videos[i].onclick = function () {
                         // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
                         const iframe = document.createElement("iframe");
-                        let iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?autoplay=1&autohide=1";
+                        let iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?enablejsapi=1&autoplay=1&autohide=1";
                         if (this.getAttribute("data-params")) iframe_url += '&' + this.getAttribute("data-params");
                         iframe.setAttribute("src", iframe_url);
                         iframe.setAttribute("frameborder", '0');
@@ -262,6 +286,7 @@ document.addEventListener("DOMContentLoaded", function() {
             tabElem('.blog-nav-item','.blog-post-list','blog-container');
         }
         reviewsVideo();
+        fancyGall();
     };
     //Catalog
     $('.catalog-toggle.desktop').click(function () {
@@ -272,6 +297,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     //Banner popup
     togglePopup('.play-banner-popup','.popup-video');
+    $('.popup-video .popup-close').click(function () {
+        if($('.popup-video iframe').length>0){
+            $("iframe").each(function() {
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+            });
+        }
+    });
     //Projects slider
     if($('.projects-slider-item').length>0){
         $('.projects-slider').slick({
@@ -293,7 +325,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     //Popups
     togglePopup('.btn-master','.popup-master');
-    togglePopup('.window-calc-submit','.popup-master');
     togglePopup('.btn-write','.popup-write');
     togglePopup('.btn-call','.popup-call');
     //Calculator
@@ -310,18 +341,22 @@ document.addEventListener("DOMContentLoaded", function() {
             $(this).find('.window-size-height').attr('data-number-item',`Размер высоты из блока ${count}`);
         });
     }
-    $('.window-calc-submit').click(function () {
-        if($(this).attr('data-type')){
-            $('.window-type-repair').val($(this).attr('data-type'));
+    $('.window-calc-container').submit(function (e) {
+        e.preventDefault();
+        if($('.window-calc-container .lead-form-checkbox').is(':checked')){
+            togglePopup('.window-calc-container','.popup-master');
+            if($(this).attr('data-type')){
+                $('.window-type-repair').val($(this).attr('data-type'));
+            }
+            if($(this).attr('data-type-window')){
+                $('.window-type-window').val($(this).attr('data-type-window'));
+            }
+            if($(this).attr('data-delivery')){
+                $('.window-type-window-delivery').val($(this).attr('data-delivery').replace(',','')+' '+$('.window-repair-radio-dest').val()+'км');
+            }
+            calculatorSizes('.window-size-width','data-number-item','.window-type-window-width');
+            calculatorSizes('.window-size-height','data-number-item','.window-type-window-height');
         }
-        if($(this).attr('data-type-window')){
-            $('.window-type-window').val($(this).attr('data-type-window'));
-        }
-        if($(this).attr('data-delivery')){
-            $('.window-type-window-delivery').val($(this).attr('data-delivery').replace(',','')+' '+$('.window-repair-radio-dest').val()+'км');
-        }
-        calculatorSizes('.window-size-width','data-number-item','.window-type-window-width');
-        calculatorSizes('.window-size-height','data-number-item','.window-type-window-height');
     });
     //How work
     if($('.how-we-work-number').length>0){

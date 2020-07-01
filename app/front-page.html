@@ -430,7 +430,7 @@
 	<section class="window-calc grey-bg">
 		<div class="container">
 			<h2 class="subtitle">Калькулятор стоимости ремонта окон</h2>
-			<div class="window-calc-container">
+			<form class="window-calc-container">
 				<div class="window-calc-container-item window-type-container">
 					<span class="window-calc-title"><strong>1.</strong> Какой вид ремонта нужен окну?</span>
 					<div class="grid-container window-type-list">
@@ -648,16 +648,16 @@
 						</div>
 						<div class="grid-container window-repair-item">
 							<div class="lead-form-item lead-form-check">
-								<input type="checkbox" id="lead-form-calc-checkbox" class="lead-form-checkbox">
+								<input type="checkbox" id="lead-form-calc-checkbox" class="lead-form-checkbox" required>
 								<label for="lead-form-calc-checkbox" class="lead-form-checkbox-label">
 									<span class="lead-form-checkbox-text">Согласие на обработку <a href="#">персональных данных</a></span>
 								</label>
 							</div>
-							<span class="btn btn-blue window-calc-submit">Вызвать мастера</span>
+							<input type="submit" class="btn btn-blue window-calc-submit" value="Вызвать мастера">
 						</div>
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 	</section>
 	<!-- Our cases -->
@@ -1723,11 +1723,11 @@
 				<div class="h2-title  popup-review-title">Отзыв о ремонте параллельно-сдвижных дверей</div>
 				<i class="fas fa-times popup-close"></i>
 			</header>
-			<main class="grid-container popup-main popup-review-main">
+			<div class="grid-container popup-main popup-review-main">
 				<div class="popup-reviews-video"></div>
 				<div class="grid-container popup-reviews-video-gallery"></div>
 				<div class="popup-reviews-content"></div>
-			</main>
+			</div>
 			<footer class="popup-footer">
 				<div class="grid-container popup-reviews-content-container">
 					<div class="h3-title subtitle popup-reviews-subtitle">Мне нужен такой же ремонт</div>
