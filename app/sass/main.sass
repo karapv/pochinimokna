@@ -436,7 +436,7 @@ h1.title
   overflow-x: auto
 .popup-container
   width: 70%
-  padding: 20px
+  padding: 24px 30px
   background: #FFFFFF
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2)
   border-radius: 3px
@@ -461,6 +461,7 @@ h1.title
 .popup-master
   .popup-container
     width: 320px
+    padding: 30px
   .lead-form-check
     box-shadow: none
 .popup-master-form-item
@@ -721,6 +722,7 @@ h1.title
     position: relative
     right: -42px
 .banner-play-container
+  cursor: pointer
   position: absolute
   top: 30%
   right: -105px
@@ -892,6 +894,10 @@ h3.why-we-advantages-title
   position: relative
   .slick-track
     display: flex
+  .slick-list
+    max-width: 1380px
+    padding: 0 30px
+    margin: 0 auto
 .project-slider-img
   display: none
 .slider-btn
@@ -911,8 +917,13 @@ h3.why-we-advantages-title
 .projects-slider-item
   height: auto
   min-height: 350px
+  &:not(.slick-active)
+    visibility: hidden
+  &.slick-active + .slick-active
+    .projects-slider-wrapper
+      margin-right: 0
 .projects-slider-wrapper
-  padding: 0 30px
+  margin-right: 30px
   background-size: cover
   background-position: center
   background-repeat: no-repeat
@@ -1125,11 +1136,15 @@ h3.why-we-advantages-title
   grid-template-rows: 1fr
   grid-gap: 20px
 .our-cases-list-gallery-main
+  border-radius: 3px
+  overflow: hidden
   img
     width: 100%
     height: 100%
     object-fit: cover
 .our-cases-list-gallery-img
+  border-radius: 3px
+  overflow: hidden
   height: calc(100%/3.3)
   &:not(:last-child)
     margin-bottom: 20px
@@ -1506,6 +1521,8 @@ h3.faq-list-title
   margin-top: 130px
   >*
     align-self: start
+.service-page-play .play-popup-title
+  padding-top: 18px
 .banner-form
   background-color: $white
   padding: 30px

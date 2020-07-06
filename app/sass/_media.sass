@@ -121,13 +121,19 @@
   //Master Lead
   .master-lead-img
     display: none
+  .master-lead
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
+    border-radius: 3px
   .master-lead-container
     grid-template-columns: 100%
     grid-gap: 20px
+    box-shadow: none
   .master-lead-item
     justify-content: start
   .master-lead-form,.master-lead-list
     padding: 30px
+  .master-lead-list
+    padding-bottom: 0
   //Our cases
   .our-cases-list-item,.our-cases-list-gallery
     grid-template-columns: 100%
@@ -175,6 +181,8 @@
       text-align: right
   .popup-review-main,.popup-reviews-content-container,.popup-reviews-form-top
     grid-template-columns: 100%
+  .popup-review-main
+    grid-gap: 10px
   .popup-write-form-submit
     width: 100%
   .popup-reviews-video-gallery
@@ -197,6 +205,9 @@
   //Contacts
   .contacts-container
     grid-template-columns: 100%
+@media screen and (max-width: 1250px)
+  .projects-slider-wrapper
+    margin-right: 0
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1190px)
   /**/
@@ -275,8 +286,6 @@
   //Why we
   .advantages-banner
     grid-template-columns: 100%
-    padding-right: 0
-    padding-left: 5px
   .advantages-banner-item:first-child
     display: none
   .advantages-banner-sale
@@ -316,8 +325,8 @@
     padding: 0 20px
   //All services
   section[class]:not(.map-contacts),#footer
-    padding-top: 20px
-    padding-bottom: 20px
+    padding-top: 15px
+    padding-bottom: 15px
   .main-banner-container .title,.banner-page .is-page-title
       margin-top: 0
   .all-services,.all-services.ismain
@@ -349,7 +358,9 @@
   .master-lead-item
     grid-template-columns: 40px 1fr
   .master-lead
-    margin: 0
+    margin: 30px auto
+  .master-lead-container
+    margin-top: 0
   //Window type
   .window-type-list
     grid-template-columns: auto
@@ -372,6 +383,8 @@
     justify-content: center
     grid-template-columns: auto auto
   //Project slider
+  .projects-slider .slick-list
+    padding: 0 20px
   .projects-slider
     .slick-track
       display: block
@@ -389,7 +402,7 @@
       height: 100%
   .projects-slider-wrapper
     background-image: none !important
-    margin: 0 20px
+    margin: 0
     padding-left: 0
     padding-right: 0
     position: relative
@@ -455,7 +468,7 @@
   .advantages-banner-sale-title
     font-size: 18px
     line-height: 21px
-    padding-left: 15px
+    padding-left: 20%
   .advantages-banner-sale-number
     font-size: 48px
     line-height: 20px
@@ -484,6 +497,9 @@
   //Blog
   .blog-list
     grid-template-columns: repeat(2,1fr)
+  //Employees
+  .employees-content
+    text-align: center
   //Blog page
   body
     blockquote
@@ -523,13 +539,15 @@
     margin-top: 0
 @media  only screen and (max-width: 680px)
   //Popups
-  .popup-container
-    iframe,.youtube
-      height: auto
-  .popup-container
-    width: 100%
+  .popup
+    .popup-container
+      width: 100%
+      height: max-content
+      iframe,.youtube
+        height: 100%
+        min-height: 200px
   .popup-review-main
-    grid-template-rows: 150px
+    grid-template-rows: auto
   .popup-call-form
     grid-template-columns: 100%
   //History

@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.header-nav').fadeToggle('fast');
     });
     //Banner popup
-    togglePopup('.play-banner-popup','.popup-video');
+    togglePopup('.banner-play-container','.popup-video');
     $('.popup-video .popup-close').click(function () {
         if($('.popup-video iframe').length>0){
             $("iframe").each(function() {
