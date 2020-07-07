@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     videos[i].onclick = function () {
                         // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
                         const iframe = document.createElement("iframe");
-                        let iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?enablejsapi=1&autoplay=1&autohide=1";
+                        let iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?enablejsapi=1&autoplay=1&mute=1&autohide=1";
                         if (this.getAttribute("data-params")) iframe_url += '&' + this.getAttribute("data-params");
                         iframe.setAttribute("src", iframe_url);
                         iframe.setAttribute("frameborder", '0');
@@ -167,6 +167,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         iframe.style.height = this.style.height;
                         // Заменяем начальное изображение (постер) на iFrame
                         this.parentNode.replaceChild(iframe, this);
+
+
                     }
                 }
             })();
