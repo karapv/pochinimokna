@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     lazyLoadInstance.update();
     //Telephone
-    $('.tel').each(function () {
+    $('.tel,.header-mobile-tel').each(function () {
         let currentText = $(this).text();
-        currentText = currentText.replace(/\s/g, '');
+        currentText = currentText.match(/\d/g).join('');
         $(this).attr('href',`tel:${currentText}`);
     });
     //Popups
