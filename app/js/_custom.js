@@ -7,7 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
     lazyLoadInstance.update();
     //Telephone
     $('.tel,.header-mobile-tel').each(function () {
-        let currentText = $(this).text();
+        let currentText;
+        if($(this).hasClass('site-contacts-icon')){
+            currentText = $(this).next('div').find('.tel').text();
+        }else{
+            currentText = $(this).text();
+        }
         currentText = currentText.match(/\d/g).join('');
         $(this).attr('href',`tel:${currentText}`);
     });
