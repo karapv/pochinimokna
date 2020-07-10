@@ -6,14 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     lazyLoadInstance.update();
     //Telephone
-    $('.tel,.header-mobile-tel').each(function () {
-        let currentText;
-        if($(this).hasClass('site-contacts-icon')){
-            currentText = $(this).next('div').find('.tel').text();
-        }else{
-            currentText = $(this).text();
-        }
-        currentText = currentText.match(/\d/g).join('');
+    $('.tel').each(function () {
+        let currentText = $(this).text();
+        currentText = currentText.replace(/\s/g, '');
         $(this).attr('href',`tel:${currentText}`);
     });
     //Popups
@@ -30,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 const popup_container = $(`${item} .popup-container`);
                 if (popup_container.has(e.target).length === 0){
                     popup_container.parent().parent().fadeOut('slow');
+                    $("iframe").each(function() {
+                        $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+                    });
                 }
             });
         }
@@ -447,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //Mobile header
     $('.header-button-contact').click(function () {
         $('.header-bottom').toggleClass('active');
-    })
+    });
 
     //Why we slider
     mobileSlider('.why-we-advantages',794);
