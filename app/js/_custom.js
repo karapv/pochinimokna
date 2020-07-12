@@ -271,9 +271,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 let currentVideo = $(this).attr('data-video'),
                     currentImg = $(this).attr('data-img'),
                     currentText = $(this).next('.our-cases-slider-content').html(),
-                    currentGallery = $(this).parent().siblings('.our-cases-list-gallery').find('.our-cases-list-gallery-imgs').html();
+                    currentGallery = $(this).parent().siblings('.our-cases-list-gallery').find('.our-cases-list-gallery-imgs').html(),
+                    currentTitle = $(this).parent().parent().find('.our-cases-slider-title').text();
                 $('.popup-reviews-content').html(currentText);
                 $('.popup-reviews-video-gallery').html(currentGallery);
+                $('.popup-review-title').text(currentTitle);
                 $('.popup-reviews-video').attr('data-youtube', currentVideo).attr('data-youtube-img', currentImg).addClass('youtube');
                 youtubeChange();
             });
@@ -281,6 +283,7 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.popup-reviews .popup-close').click(function () {
                 $('.popup-reviews-video-gallery').html('');
                 $('.popup-reviews-content').html('');
+                $('.popup-review-title').text('');
                 $('.popup-reviews-video').attr('data-youtube', '').attr('data-youtube-img', '').removeClass('youtube').find('.youtube-container').remove();
             });
         }
