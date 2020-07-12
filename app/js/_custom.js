@@ -16,15 +16,18 @@ document.addEventListener("DOMContentLoaded", function() {
         if($(item).length>0){
             const closeButton = $(`${item} .popup-close`);
             $(button).click(function () {
+                $('body').addClass('no-scroll');
                 $(item).fadeIn(500);
             });
             closeButton.click(function () {
                 $(item).fadeOut(500);
+                $('body').removeClass('no-scroll');
             });
             $(document).mouseup(function (e) {
                 const popup_container = $(`${item} .popup-container`);
                 if (popup_container.has(e.target).length === 0){
                     popup_container.parent().parent().fadeOut('slow');
+                    $('body').removeClass('no-scroll');
                     $("iframe").each(function() {
                         $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
                     });
