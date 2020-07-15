@@ -52,6 +52,7 @@ gulp.task('scripts', function() {
 		//'node_modules/materialize-css/dist/js/materialize.min.js',
 		//'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+		'node_modules/scroll-lock/dist/scroll-lock.js',
 		//'node_modules/readmore-js/readmore.min.js',
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end

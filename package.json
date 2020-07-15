@@ -31,6 +31,7 @@
 		"js-datepicker": "^5.11.0",
 		"materialize-css": "^1.0.0",
 		"readmore-js": "^2.2.1",
+		"scroll-lock": "^2.1.4",
 		"slick-carousel": "^1.8.1",
 		"timepicker": "^1.13.9",
 		"vanilla-lazyload": "^12.5.1"

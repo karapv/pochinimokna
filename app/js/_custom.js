@@ -15,13 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const togglePopup = (button,item)=>{
         if($(item).length>0){
             const closeButton = $(`${item} .popup-close`);
+            const $scrollableElement = document.querySelector(item);
             $(button).click(function () {
-                $('body').addClass('no-scroll');
+                //$('body').addClass('no-scroll');
                 $(item).fadeIn(500);
+                scrollLock.disablePageScroll($scrollableElement);
             });
             closeButton.click(function () {
                 $(item).fadeOut(500);
-                $('body').removeClass('no-scroll');
+                scrollLock.enablePageScroll($scrollableElement);
+                //$('body').removeClass('no-scroll');
             });
             $(document).mouseup(function (e) {
                 const popup_container = $(`${item} .popup-container`);
