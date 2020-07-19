@@ -19,15 +19,18 @@ document.addEventListener("DOMContentLoaded", function() {
             $(button).click(function () {
                 //$('body').addClass('no-scroll');
                 $(item).fadeIn(500);
-                scrollLock.disablePageScroll($scrollableElement);
+                scrollLock.disableBodyScroll($scrollableElement);
             });
             closeButton.click(function () {
                 $(item).fadeOut(500);
-                scrollLock.enablePageScroll($scrollableElement);
+                scrollLock.enableBodyScroll($scrollableElement);
+                bodyScrollLock.clearAllBodyScrollLocks();
                 //$('body').removeClass('no-scroll');
             });
             $(document).mouseup(function (e) {
                 const popup_container = $(`${item} .popup-container`);
+                scrollLock.enableBodyScroll($scrollableElement);
+                bodyScrollLock.clearAllBodyScrollLocks();
                 if (popup_container.has(e.target).length === 0){
                     popup_container.parent().parent().fadeOut('slow');
                     $('body').removeClass('no-scroll');
