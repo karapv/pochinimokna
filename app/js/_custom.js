@@ -19,18 +19,15 @@ document.addEventListener("DOMContentLoaded", function() {
             $(button).click(function () {
                 //$('body').addClass('no-scroll');
                 $(item).fadeIn(500);
-                scrollLock.disableBodyScroll($scrollableElement);
+                bodyScrollLock.disableBodyScroll($scrollableElement);
             });
             closeButton.click(function () {
                 $(item).fadeOut(500);
-                scrollLock.enableBodyScroll($scrollableElement);
-                bodyScrollLock.clearAllBodyScrollLocks();
+                bodyScrollLock.enableBodyScroll($scrollableElement);
                 //$('body').removeClass('no-scroll');
             });
             $(document).mouseup(function (e) {
                 const popup_container = $(`${item} .popup-container`);
-                scrollLock.enableBodyScroll($scrollableElement);
-                bodyScrollLock.clearAllBodyScrollLocks();
                 if (popup_container.has(e.target).length === 0){
                     popup_container.parent().parent().fadeOut('slow');
                     $('body').removeClass('no-scroll');
@@ -170,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     videos[i].onclick = function () {
                         // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
                         const iframe = document.createElement("iframe");
-                        let iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?enablejsapi=1&autoplay=1&mute=1&autohide=1";
+                        let iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?enablejsapi=1&autoplay=1&&autohide=1";
                         if (this.getAttribute("data-params")) iframe_url += '&' + this.getAttribute("data-params");
                         iframe.setAttribute("src", iframe_url);
                         iframe.setAttribute("frameborder", '0');

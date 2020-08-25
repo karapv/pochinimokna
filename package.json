@@ -12,7 +12,7 @@
 		"@babel/core": "^7.9.6",
 		"@babel/preset-env": "^7.9.6",
 		"@fancyapps/fancybox": "^3.5.7",
-		"browser-sync": "^2.26.7",
+		"browser-sync": "^2.26.12",
 		"del": "^5.1.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
@@ -37,6 +37,8 @@
 		"vanilla-lazyload": "^12.5.1"
 	},
 	"dependencies": {
-		"body-scroll-lock": "^3.0.3"
+		"body-scroll-lock": "^3.0.3",
+		"node-sass": "^4.14.1",
+		"rebuild": "^0.1.2"
 	}
 }
