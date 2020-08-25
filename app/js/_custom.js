@@ -190,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const checkWidth = () =>{
             if ($(window).width() <= mobileWidth) {
                 $(elem).slick({
+                    lazyLoad: 'progressive',
                     infinite: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -321,6 +322,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //Projects slider
     if($('.projects-slider-item').length>0){
         $('.projects-slider').slick({
+            lazyLoad: 'progressive',
             infinite: true,
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -422,6 +424,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //Employees slider
     if($('.employees-slider-item').length>0){
         $('.employees-slider').slick({
+            lazyLoad: 'progressive',
             infinite: true,
             slidesToShow: 6,
             slidesToScroll: 6,
@@ -466,6 +469,7 @@ document.addEventListener("DOMContentLoaded", function() {
     salePopup('.popup-sale');
     //Blog page slider
     $('.blog-page-slider').slick({
+        lazyLoad: 'progressive',
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
